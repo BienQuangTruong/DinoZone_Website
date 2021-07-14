@@ -43,18 +43,23 @@ function switchTab(clicked_id) {
   switch (clicked_id) {
     case "all":
       tabAll.style.display = "block";
+      setBG("url('../assets/CATALOGUE/BG/FULL/FULL BG.png')");
       body.break;
     case "land":
       tabLand.style.display = "block";
+      setBG("url('../assets/CATALOGUE/BG/LAND/LAND BG.png')");
       break;
     case "sea":
       tabSea.style.display = "block";
+      setBG("url('../assets/CATALOGUE/BG/SEA/SEA BG.jpg')");
       break;
     case "air":
+      setBG("url('../assets/CATALOGUE/BG/AIR/AIR BG.png')");
       tabAir.style.display = "block";
       break;
     default:
       tabAll.style.display = "block";
+      setBG("url('../assets/CATALOGUE/BG/FULL/FULL BG.png')");
   }
 }
 
