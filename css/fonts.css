@@ -1,0 +1,17 @@
+/*  font-family: Bungee  */
+@font-face {
+  font-family: Bungee;
+  src: url("../fonts/Bungee/Bungee-Regular.ttf");
+}
+
+/*  font-family: Kavoon  */
+@font-face {
+  font-family: Kavoon;
+  src: url("../fonts/kavoon/Kavoon-Regular.otf");
+}
+
+/*  font-family: Roboto_Slab  */
+@font-face {
+  font-family: Roboto_Slab;
+  src: url("../fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf");
+}

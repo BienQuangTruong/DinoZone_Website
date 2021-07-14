@@ -1,0 +1,377 @@
+@import url("../css/fonts.css");
+
+html,
+body {
+  margin: 0%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:root {
+  /*      theme font-family   */
+  --Bungee: "Bungee", cursive;
+  --Kavoon: "Kavoon", cursive;
+  --Roboto_Slab: "Roboto_Slab", cursive;
+
+  /*      theme font-color  */
+  --text: #fffadc;
+}
+
+.nav {
+  background-size: cover;
+  background: url("../assets/TOP\ BAR.png");
+  height: 11.5vh;
+}
+
+.top-bar-left {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.top-bar-left .logo {
+  width: 30%;
+  margin: 1.35rem -0.7rem;
+}
+
+.top-bar-left .top-menu {
+  float: right;
+  margin: 1rem 2.5rem;
+  display: block;
+  width: 60%;
+}
+
+.top-bar-left .top-menu .language {
+  float: right;
+  width: 6%;
+}
+
+.top-bar-left .top-menu .menu {
+  position: relative;
+  width: 100%;
+  display: flex;
+  /* margin: 2rem 5rem 0 0; */
+  justify-content: space-between;
+}
+
+.top-bar-left .top-menu .menu .menu-item {
+  /* margin: 0.5rem 2rem 0 0rem; */
+  margin-right: 3rem;
+  color: var(--text);
+  width: 100%;
+  position: relative;
+}
+
+.top-bar-left .top-menu .menu .menu-item > img {
+  position: absolute;
+  width: 120%;
+  z-index: 1;
+  min-width: 10rem;
+}
+
+.top-bar-left .top-menu .menu .menu-item > p {
+  width: 120%;
+  position: relative;
+  z-index: 100;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: var(--Kavoon);
+  margin: 1rem 0 0 0;
+}
+
+/* .top-bar-right {
+  width: 100%;
+}
+
+.top-bar-right .top-bar-right-top {
+  width: 100%;
+}
+
+.top-bar-right .top-bar-right-top .language {
+  width: 5%;
+}
+
+.top-bar-right .top-bar-right-bottom {
+  width: 100%;
+} */
+
+/******** Main ********/
+main {
+  background: url("../assets/TRANG\ CHỦ\ MẪU.png");
+  background-size: cover;
+  height: 170vh;
+  /* display: flex; */
+  justify-content: center;
+}
+
+/******** Slide ********/
+.mySlides {
+  display: flex;
+}
+.mySlides > img {
+  vertical-align: middle;
+  width: 30%;
+  /* border-right: orange 0.2rem solid; */
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+  margin: 4rem 0 0 0;
+  width: 100%;
+  height: 49vh;
+  position: absolute;
+  border-top: 1.5rem solid rgba(255, 255, 255, 0.5);
+  border-bottom: 2.2rem solid rgba(255, 255, 255, 0.5);
+}
+
+.border-container {
+  border: orange 0.2rem solid;
+  height: 49vh;
+  overflow: hidden;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  width: auto;
+  padding: 16px;
+  margin-top: -1px;
+  color: white;
+  font-weight: bold;
+  font-size: 100px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: var(--text);
+  /* padding: 8px 12px; */
+  /* position: relative; */
+  /* bottom: 8px; */
+  width: 58%;
+  height: 100%;
+  text-align: left;
+  background: #ed526e;
+  float: right;
+  background-size: cover;
+}
+
+.text .title {
+  font-family: var(--Bungee);
+  font-size: 75px;
+  padding: 0 0 0 3rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.text .content {
+  font-family: var(--Roboto_Slab);
+  font-size: 24px;
+  padding: 0 3rem 5rem;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.group-dot {
+  position: absolute;
+  bottom: 4%;
+  width: auto;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  left: 44%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  margin: 0 15px;
+  background-color: var(--text);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #ffb800;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+/**** Catalog ****/
+.catalog-container {
+  /* margin: 45rem 0 0 0; */
+  margin-top: 45rem;
+  margin-left: 6rem;
+  width: 91%;
+  height: 77vh;
+  border-radius: 2rem;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.catalog-container .catalog-top > p {
+  font-size: 9rem;
+  font-family: var(--Bungee);
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text);
+}
+
+.catalog-container .catalog-top > p span {
+  margin: -14rem;
+  display: block;
+}
+
+.catalog-container .catalog-bottom > div p {
+  font-size: 6rem;
+  font-family: var(--Bungee);
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text);
+  margin: 0;
+}
+
+.catalog-container .catalog-top {
+  height: 50%;
+  width: 92%;
+  margin-left: 3.5rem;
+  margin-top: 2.5rem;
+  border-radius: 1rem;
+  border: orange 0.2rem solid;
+  background: url("../assets/DINO\ CATALOGUE.png");
+}
+
+.catalog-container .catalog-bottom {
+  height: 33%;
+  width: 92%;
+  margin-left: 3.5rem;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+}
+
+.catalog-container .catalog-bottom .catalog-game {
+  display: inline-block;
+  height: 100%;
+  width: 31.5%;
+  border-radius: 1rem;
+  border: orange 0.2rem solid;
+  background: url("../assets/GAMES.png");
+  background-size: cover;
+}
+
+.catalog-container .catalog-bottom .catalog-book {
+  display: inline-block;
+  height: 100%;
+  width: 31.5%;
+  margin-left: 1.5rem;
+  border-radius: 1rem;
+  border: orange 0.2rem solid;
+  background: url("../assets/BOOKS.png");
+  background-size: cover;
+}
+
+.catalog-container .catalog-bottom .catalog-movie {
+  display: inline-block;
+  height: 100%;
+  width: 31.5%;
+  margin-left: 1.5rem;
+  border-radius: 1rem;
+  border: orange 0.2rem solid;
+  background: url("../assets/MOVIES.png");
+  background-size: cover;
+}
+
+/******** Footer ********/
+footer.footer {
+  background: url("../assets/FOOTER.png");
+  background-size: cover;
+  height: 6.6vh;
+}
+
+/*              Viewport less then or equal to 1130px            */
+
+@media only screen and (max-width: 1130px) {
+  .nav .top-bar-left .top-menu .menu .menu-item > p {
+    font-size: 12px;
+  }
+}
+
+/*              Viewport less then or equal to 750px            */
+
+@media only screen and (max-width: 750px) {
+  .nav .top-bar-left,
+  .nav .top-menu,
+  .nav .menu {
+    flex-direction: column;
+  }
+
+  .nav .top-bar-left .top-menu .language {
+    /* display: none; */
+  }
+
+  .nav .toggle-collapse {
+    display: initial;
+  }
+}

@@ -1,0 +1,389 @@
+@import url("../css/fonts.css");
+
+html,
+body {
+  margin: 0%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  background: url("../assets/BOOKS/MAIN_SITE/BACKGROUND\ FILL\ GIỮ\ CỐ\ ĐỊNH.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+:root {
+  /*      theme font-family   */
+  --Bungee: "Bungee", cursive;
+  --Kavoon: "Kavoon", cursive;
+  --Roboto_Slab: "Roboto_Slab", cursive;
+
+  /*      theme font-color  */
+  --text: #fffadc;
+}
+
+.nav {
+  background-size: cover;
+  background: url("../assets/TOP\ BAR.png");
+  height: 11.5vh;
+}
+
+.top-bar-left {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.top-bar-left .logo {
+  width: 30%;
+  margin: 1.35rem -0.7rem;
+}
+
+.top-bar-left .top-menu {
+  float: right;
+  margin: 1rem 2.5rem;
+  display: block;
+  width: 60%;
+}
+
+.top-bar-left .top-menu .language {
+  float: right;
+  width: 6%;
+}
+
+.top-bar-left .top-menu .menu {
+  position: relative;
+  width: 100%;
+  display: flex;
+  /* margin: 2rem 5rem 0 0; */
+  justify-content: space-between;
+}
+
+.top-bar-left .top-menu .menu .menu-item {
+  /* margin: 0.5rem 2rem 0 0rem; */
+  margin-right: 3rem;
+  color: var(--text);
+  width: 100%;
+  position: relative;
+}
+
+.top-bar-left .top-menu .menu .menu-item > img {
+  position: absolute;
+  width: 120%;
+  z-index: 1;
+  min-width: 10rem;
+}
+
+.top-bar-left .top-menu .menu .menu-item > p {
+  width: 120%;
+  position: relative;
+  z-index: 100;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: var(--Kavoon);
+  margin: 1rem 0 0 0;
+}
+
+/******** Main ********/
+main {
+  /* width: 100%; */
+  height: 200vh;
+  justify-content: center;
+  /* overflow: hidden; */
+}
+
+/******** Banner ********/
+
+main .banner {
+  width: 100%;
+  height: 30%;
+  background: url("../assets/MOVIES/MAIN_SITE/BANNER.png");
+  background-size: cover;
+  border: orange 0.2rem solid;
+}
+
+main .banner > p {
+  font-size: 9rem;
+  font-family: var(--Bungee);
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text);
+  text-shadow: 0.5rem 0.5rem 0.75rem #2c2b2b;
+}
+
+/******** Movie list ********/
+
+main .movie-list {
+  width: 90%;
+  height: 70%;
+  margin: 0 4.5%;
+  background-size: cover;
+  border: orange 0.2rem solid;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+main .movie-list .movie-item {
+  width: 38%;
+  height: 34%;
+  margin: 6%;
+  background: url("../assets/MOVIES/INFO/INFO\ BACKGROUND.png");
+  float: left;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+main .movie-list .movie-item .movie-image {
+  width: 100%;
+  height: 80%;
+  display: flex;
+}
+
+main .movie-list .movie-item .movie-image > img {
+  display: block;
+  margin: auto;
+  width: 96%;
+  height: 94%;
+  cursor: pointer;
+}
+
+main .movie-list .movie-item .movie-control {
+  width: 100%;
+  height: 20%;
+  display: inline-flex;
+}
+
+main .movie-list .movie-item .movie-control .info-btn {
+  background: url("../assets/MOVIES/MAIN_SITE/NÚT\ MOVIE.png");
+  background-size: cover;
+  width: 50%;
+  height: 90%;
+  cursor: pointer;
+}
+
+main .movie-list .movie-item .movie-control .info-btn > p {
+  text-align: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: var(--Bungee);
+  color: var(--text);
+  margin: auto;
+}
+
+/******** Modal ********/
+
+/* The Modal (background) */
+.modal {
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animatetop;
+  animation-duration: 0.5s;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 102; /* Sit on top */
+  padding-top: 4%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+
+.modal-content {
+  position: relative;
+  background: url("../assets/BOOKS/BOOK_INFO/BACKGROUND\ INFO\ SÁCH.png")
+    no-repeat;
+  margin: auto;
+  padding: 0;
+  width: 42%;
+  height: 84%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  padding: 1% 70%;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  background-size: cover;
+  width: 100%;
+  height: 47%;
+  border-radius: 1rem;
+  display: flex;
+}
+
+.modal-header > img {
+  margin: auto;
+  width: 94%;
+  display: block;
+}
+
+.modal-body {
+  width: 100%;
+  height: 100%;
+  color: var(--text);
+}
+
+.modal-body > h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: var(--Bungee);
+  text-shadow: 2px 2px 4px #2c2b2b;
+  text-align: center;
+  margin: auto;
+}
+
+.modal-body > p {
+  margin: auto;
+  padding: 0 10%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.modal-body .bottom-btn {
+  background: url("../assets/NÚT.png") no-repeat;
+  background-size: cover;
+  width: 40%;
+  height: 11%;
+  margin: auto;
+  cursor: pointer;
+}
+
+.modal-body .bottom-btn > p {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: var(--Bungee);
+  /* margin: auto; */
+  text-align: center;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+}
+
+/******** Watch modal ********/
+
+.modal-watch {
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animatetop;
+  animation-duration: 0.5s;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 102; /* Sit on top */
+  padding-top: 4%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content-watch {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 85%;
+  height: 85%;
+  border: orange 0.2rem solid;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+  overflow: hidden;
+  display: block;
+}
+
+.modal-content-watch .movie-screen {
+  width: 96%;
+  height: 92%;
+  background-size: cover;
+  margin: 2rem;
+  z-index: 101;
+}
+
+.movie-screen > img {
+  width: 100%;
+  height: 100%;
+}
+
+.play-btn {
+  width: auto;
+  height: auto;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 103;
+}
+
+/******** Footer ********/
+footer.footer {
+  background: url("../assets/FOOTER.png");
+  background-size: cover;
+  height: 6.6vh;
+}
+
+/*              Viewport less then or equal to 1130px            */
+
+@media only screen and (max-width: 1130px) {
+  .nav .top-bar-left .top-menu .menu .menu-item > p {
+    font-size: 12px;
+  }
+}
+
+/*              Viewport less then or equal to 750px            */
+
+@media only screen and (max-width: 750px) {
+  .nav .top-bar-left,
+  .nav .top-menu,
+  .nav .menu {
+    flex-direction: column;
+  }
+
+  .nav .top-bar-left .top-menu .language {
+    /* display: none; */
+  }
+
+  .nav .toggle-collapse {
+    display: initial;
+  }
+}
