@@ -4,38 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- --------- Owl-Carousel ------------------->
-    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+    <link rel="shortcut icon" href="../assets/shortcut-icon.png" />
 
     <!-- --------- Custome css ------------------->
-    <link rel="stylesheet" href="./css/movie.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/movie.css" />
     <title>DinoZone</title>
   </head>
   <body>
     <!---------------------------------- Top Bar ---------------------------------->
     <div class="nav">
-      <div class="top-bar-left">
-        <img class="logo" src="assets/LOGO.png" />
+      <div class="top-bar">
+        <div class="logo">
+          <a href="index.html"><img src="../assets/LOGO.png" /></a>
+        </div>
+
+        <input type="checkbox" id="overlay-input" />
+        <label for="overlay-input" id="overlay-button"><span></span></label>
+        <div id="overlay">
+          <ul>
+            <li><a href="./index.html">trang chủ</a></li>
+            <li><a href="./catalogue.html">catalogue</a></li>
+            <li><a href="./games.html">games</a></li>
+            <li><a href="./books.html">sách</a></li>
+            <li><a href="./movies.html">phim</a></li>
+            <li>
+              <img
+                class="language"
+                onclick="changeLanguage('en')"
+                src="../assets/CỜ VIỆT MINI.png"
+              />
+            </li>
+          </ul>
+        </div>
+
         <div class="top-menu">
-          <img class="language" src="assets/CỜ ANH MINI.png" />
+          <img
+            class="language"
+            onclick="changeLanguage('en')"
+            src="../assets/CỜ VIỆT MINI.png"
+          />
           <div class="menu">
-            <div class="menu-item">
-              <img src="assets/NÚT.png" />
+            <div class="menu-item" onclick="redirect('vn-catalog')">
               <p>catalogue</p>
             </div>
-            <div class="menu-item">
-              <img src="assets/NÚT.png" />
+            <div class="menu-item" onclick="redirect('vn-game')">
               <p>games</p>
             </div>
-            <div class="menu-item">
-              <img src="assets/NÚT.png" />
-              <p>books</p>
+            <div class="menu-item" onclick="redirect('vn-book')">
+              <p>sách</p>
             </div>
-            <div class="menu-item">
-              <img src="assets/NÚT.png" />
-              <p>movies</p>
+            <div class="menu-item" onclick="redirect('vn-movie')">
+              <p>phim</p>
             </div>
           </div>
         </div>
@@ -46,62 +66,70 @@
     <!---------------------------------- Main ---------------------------------->
     <main>
       <div class="banner">
-        <p>movies</p>
+        <p>phim</p>
       </div>
       <div class="movie-list">
         <div class="movie-item">
           <div class="movie-image">
             <img
-              src="assets/MOVIES/INFO/MOVIE INFO 1.png"
+              src="../assets/MOVIES/INFO/MOVIE INFO 1.png"
               onclick="show('modal_1')"
             />
           </div>
           <div class="movie-control">
-            <div class="info-btn" onclick="show('modal_1')"><p>info</p></div>
+            <div class="info-btn" onclick="show('modal_1')">
+              <p>thông tin</p>
+            </div>
             <div class="info-btn" onclick="show('modal_5')">
-              <p>watch online</p>
+              <p>xem phim</p>
             </div>
           </div>
         </div>
         <div class="movie-item">
           <div class="movie-image">
             <img
-              src="assets/MOVIES/INFO/MOVIE INFO 2.png"
+              src="../assets/MOVIES/INFO/MOVIE INFO 2.png"
               onclick="show('modal_2')"
             />
           </div>
           <div class="movie-control">
-            <div class="info-btn" onclick="show('modal_2')"><p>info</p></div>
+            <div class="info-btn" onclick="show('modal_2')">
+              <p>thông tin</p>
+            </div>
             <div class="info-btn" onclick="show('modal_6')">
-              <p>watch online</p>
+              <p>xem phim</p>
             </div>
           </div>
         </div>
         <div class="movie-item">
           <div class="movie-image">
             <img
-              src="assets/MOVIES/INFO/MOVIE INFO 3.png"
+              src="../assets/MOVIES/INFO/MOVIE INFO 3.png"
               onclick="show('modal_3')"
             />
           </div>
           <div class="movie-control">
-            <div class="info-btn" onclick="show('modal_3')"><p>info</p></div>
+            <div class="info-btn" onclick="show('modal_3')">
+              <p>thông tin</p>
+            </div>
             <div class="info-btn" onclick="show('modal_7')">
-              <p>watch online</p>
+              <p>xem phim</p>
             </div>
           </div>
         </div>
         <div class="movie-item">
           <div class="movie-image">
             <img
-              src="assets/MOVIES/INFO/MOVIE INFO 4.png"
+              src="../assets/MOVIES/INFO/MOVIE INFO 4.png"
               onclick="show('modal_4')"
             />
           </div>
           <div class="movie-control">
-            <div class="info-btn" onclick="show('modal_4')"><p>info</p></div>
+            <div class="info-btn" onclick="show('modal_4')">
+              <p>thông tin</p>
+            </div>
             <div class="info-btn" onclick="show('modal_8')">
-              <p>watch online</p>
+              <p>xem phim</p>
             </div>
           </div>
         </div>
@@ -111,26 +139,25 @@
       <!-- The Modal 1 -->
       <div id="modal_1" class="modal">
         <img
-          src="assets/MOVIES/INFO/NÚT TẮT INFO.png"
+          src="../assets/MOVIES/INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
         <!-- Modal content -->
         <div class="modal-content">
           <div class="modal-header">
-            <img src="assets/MOVIES/INFO/MOVIE INFO 1.png" />
+            <img src="../assets/MOVIES/INFO/MOVIE INFO 1.png" />
           </div>
           <div class="modal-body">
             <h2>primal</h2>
             <p>
-              Set in an anachronistic and fantastical prehistoric-like world,
-              the premise is a bond between a caveman and a Tyrannosaurus (named
-              “Spear” and “Fang” in the production notes and credits,
-              respectively) who struggle to survive as they encounter the
-              various dangerous fauna and people that live in their world.
+              Lấy bối cảnh ở một thế giới thời tiền sử giả tưởng và kỳ ảo, mối
+              quan hệ giữa một người thượng cổ và một con khủng long bạo chúa,
+              cả hai đấu tranh để tồn tại khi họ gặp phải các loài động vật nguy
+              hiểm khác nhau và những người sống trong thế giới của họ.
             </p>
             <div class="bottom-btn" onclick="watch('modal_5')">
-              <p>watch online</p>
+              <p>xem phim</p>
             </div>
           </div>
         </div>
@@ -138,28 +165,27 @@
       <!-- The Modal 2 -->
       <div id="modal_2" class="modal">
         <img
-          src="assets/MOVIES/INFO/NÚT TẮT INFO.png"
+          src="../assets/MOVIES/INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
         <!-- Modal content -->
         <div class="modal-content">
           <div class="modal-header">
-            <img src="assets/MOVIES/INFO/MOVIE INFO 2.png" />
+            <img src="../assets/MOVIES/INFO/MOVIE INFO 2.png" />
           </div>
           <div class="modal-body">
-            <h2>the good dinosaur</h2>
+            <h2>CHÚ KHỦNG LONG TỐT BỤNG</h2>
             <p>
-              In a world where the earth hasn't been hit by meteors and
-              dinosaurs haven't become extinct, a lizard-like dinosaur named
-              Arlo lost his father in a flood accident. One day, Arlo fell into
-              a river and was knocked unconscious by a rock. When he woke up, he
-              found himself far from home. While trying to find his way back
-              home in the Clawed-Tooth Mountains, he becomes friends with a
-              caveman named Spot.
+              Trong một thế giới mà loài khủng long chưa bị tuyệt chủng, chú
+              khủng long Arlo bị mất bố trong một tai nạn nước lũ. Một ngày,
+              Arlo rơi xuống một con sông và bị đánh ngất bởi một hòn đá. Khi
+              tỉnh dậy, cậu thấy mình đang ở cách nhà rất xa. Trong khi cố gắng
+              tìm đường trở về nhà tại Clawed-Tooth Mountains, cậu trở thành bạn
+              với một người thượng cổ tên là Spot.
             </p>
             <div class="bottom-btn" onclick="watch('modal_6')">
-              <p>watch online</p>
+              <p>xem phim</p>
             </div>
           </div>
         </div>
@@ -167,24 +193,25 @@
       <!-- The Modal 3 -->
       <div id="modal_3" class="modal">
         <img
-          src="assets/MOVIES/INFO/NÚT TẮT INFO.png"
+          src="../assets/MOVIES/INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
         <!-- Modal content -->
         <div class="modal-content">
           <div class="modal-header">
-            <img src="assets/MOVIES/INFO/MOVIE INFO 3.png" />
+            <img src="../assets/MOVIES/INFO/MOVIE INFO 3.png" />
           </div>
           <div class="modal-body">
-            <h2>the land before time</h2>
+            <h2>VÙNG ĐẤT NGUYÊN THỦY</h2>
             <p>
-              Four jolly dinosaurs on the trip to New York, going along with
-              them is Captain Neweyes a time traveler who want to bring smiles
-              to the children of the Big Apple.
+              Bốn con khủng long thích vui nhộn có một chuyến đi đến Thành phố
+              New York, với sự cho phép của Đại úy Neweyes, người ngoài hành
+              tinh du hành thời gian có ý định mang lại một số niềm vui cho cuộc
+              sống của những đứa trẻ.
             </p>
             <div class="bottom-btn" onclick="watch('modal_7')">
-              <p>watch online</p>
+              <p>xem phim</p>
             </div>
           </div>
         </div>
@@ -192,25 +219,26 @@
       <!-- The Modal 4 -->
       <div id="modal_4" class="modal">
         <img
-          src="assets/MOVIES/INFO/NÚT TẮT INFO.png"
+          src="../assets/MOVIES/INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
         <!-- Modal content -->
         <div class="modal-content">
           <div class="modal-header">
-            <img src="assets/MOVIES/INFO/MOVIE INFO 4.png" />
+            <img src="../assets/MOVIES/INFO/MOVIE INFO 4.png" />
           </div>
           <div class="modal-body">
-            <h2>walking with dinosaurs</h2>
+            <h2>HÀNH TRÌNH CÙNG KHỦNG LONG</h2>
             <p>
-              A paleontologist named Zack takes his nephew Ricky and niece Jade
-              on a fossil hunt. While alone, Ricky is met by a talking raven
-              named Alex, who turns into an Alexornis. He tells him of a story
-              set in the Late Cretaceous period, 70 million years ago.
+              Một nhà cổ sinh vật học tên là Zack đưa cháu trai Ricky và cháu
+              gái Jade đi săn hóa thạch . Khi ở một mình, Ricky gặp một con quạ
+              biết nói tên là Alex, người đã biến thành Alexornis . Ông kể cho
+              anh ta nghe về một câu chuyện lấy bối cảnh cuối kỷ Phấn trắng ,
+              cách đây 70 triệu năm.
             </p>
             <div class="bottom-btn" onclick="watch('modal_8')">
-              <p>watch online</p>
+              <p>xem phim</p>
             </div>
           </div>
         </div>
@@ -223,12 +251,8 @@
         <!-- Modal content -->
         <div class="modal-content-watch">
           <div class="movie-screen">
-            <img src="assets/MOVIES/WATCH_MOVIE/PHIM 1.png" />
+            <img src="../assets/MOVIES/WATCH_MOVIE/movie-1.png" />
           </div>
-          <img
-            class="play-btn"
-            src="assets/MOVIES/WATCH_MOVIE/PLAY BUTTON.png"
-          />
         </div>
       </div>
       <!-- The Modal 6 -->
@@ -236,12 +260,8 @@
         <!-- Modal content -->
         <div class="modal-content-watch">
           <div class="movie-screen">
-            <img src="assets/MOVIES/WATCH_MOVIE/PHIM 2.png" />
+            <img src="../assets/MOVIES/WATCH_MOVIE/movie-2.png" />
           </div>
-          <img
-            class="play-btn"
-            src="assets/MOVIES/WATCH_MOVIE/PLAY BUTTON.png"
-          />
         </div>
       </div>
       <!-- The Modal 7 -->
@@ -249,12 +269,8 @@
         <!-- Modal content -->
         <div class="modal-content-watch">
           <div class="movie-screen">
-            <img src="assets/MOVIES/WATCH_MOVIE/PHIM 3.png" />
+            <img src="../assets/MOVIES/WATCH_MOVIE/movie-3.png" />
           </div>
-          <img
-            class="play-btn"
-            src="assets/MOVIES/WATCH_MOVIE/PLAY BUTTON.png"
-          />
         </div>
       </div>
       <!-- The Modal 8 -->
@@ -262,24 +278,13 @@
         <!-- Modal content -->
         <div class="modal-content-watch">
           <div class="movie-screen">
-            <img src="assets/MOVIES/WATCH_MOVIE/PHIM 4.png" />
+            <img src="../assets/MOVIES/WATCH_MOVIE/movie-4.png" />
           </div>
-          <img
-            class="play-btn"
-            src="assets/MOVIES/WATCH_MOVIE/PLAY BUTTON.png"
-          />
         </div>
       </div>
 
       <!-------------x-------------------- Modal -------------------x-------------->
     </main>
-    <!---------------------------------- slidebar ---------------------------------->
-
-    <!---------------x------------------ slidebar -----------------x---------------->
-
-    <!---------------------------------- content ---------------------------------->
-
-    <!---------------x------------------ content -----------------x---------------->
 
     <!---------------x------------------ Main -----------------x---------------->
 
@@ -288,12 +293,10 @@
     <!---------------x------------------ Footer -----------------x---------------->
 
     <!-- Jquery Library file -->
-    <script src="./js/Jquery3.6.0.min.js"></script>
-
-    <!-- Owl-Carousel js -->
-    <script src="./js/owl.carousel.min.js"></script>
+    <script src="../js/Jquery3.6.0.min.js"></script>
 
     <!-- Custome Javascript file -->
-    <script src="./js/movie.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/movie.js"></script>
   </body>
 </html>

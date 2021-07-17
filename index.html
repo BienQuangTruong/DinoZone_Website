@@ -4,31 +4,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/Style.css" />
+    <link rel="shortcut icon" href="assets/shortcut-icon.png" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/home.css" />
     <title>DinoZone</title>
   </head>
   <body>
     <!---------------------------------- Top Bar ---------------------------------->
     <div class="nav">
-      <div class="top-bar-left">
-        <img class="logo" src="assets/LOGO.png" />
+      <div class="top-bar">
+        <div class="logo">
+          <a href="index.html"><img src="assets/LOGO.png" /></a>
+        </div>
+
+        <input type="checkbox" id="overlay-input" />
+        <label for="overlay-input" id="overlay-button"><span></span></label>
+        <div id="overlay">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./en/catalogue.html">catalogue</a></li>
+            <li><a href="./en/games.html">games</a></li>
+            <li><a href="./en/books.html">books</a></li>
+            <li><a href="./en/movies.html">movies</a></li>
+            <li>
+              <img
+                class="language"
+                onclick="changeLanguage('vn')"
+                src="assets/CỜ ANH MINI.png"
+              />
+            </li>
+          </ul>
+        </div>
+
         <div class="top-menu">
-          <img class="language" src="assets/CỜ ANH MINI.png" />
+          <img
+            class="language"
+            onclick="changeLanguage('vn')"
+            src="assets/CỜ ANH MINI.png"
+          />
           <div class="menu">
-            <div class="menu-item">
-              <img src="assets/NÚT.png" />
+            <div class="menu-item" onclick="redirect('catalog')">
               <p>catalogue</p>
             </div>
-            <div class="menu-item">
-              <img src="assets/NÚT.png" />
+            <div class="menu-item" onclick="redirect('game')">
               <p>games</p>
             </div>
-            <div class="menu-item">
-              <img src="assets/NÚT.png" />
+            <div class="menu-item" onclick="redirect('book')">
               <p>books</p>
             </div>
-            <div class="menu-item">
-              <img src="assets/NÚT.png" />
+            <div class="menu-item" onclick="redirect('movie')">
               <p>movies</p>
             </div>
           </div>
@@ -42,49 +66,51 @@
       <div class="slideshow-container">
         <div class="border-container">
           <div class="mySlides fade">
-            <img src="assets/images/PREVIEW 1.png" style="width: 42%" />
+            <div class="image-slide">
+              <img src="assets/images/PREVIEW 1.png" />
+            </div>
             <div class="text">
-              <p class="title">NEW BOOKS</p>
+              <p class="title">Genndy’S “Primal” on air!</p>
               <p class="content">
                 Spear and Fang continue their journey together with five all-new
-                episodes of Genny Tartakovsky's Primal, premiering Sunday,
+                episodes of Genndy Tartakovsky's Primal, premiering Sunday,
                 October 4th at 11:30pm ET/PT on Adult Swim. Combining artistry,
-                emotion and flat our action, the series has as well been renewed
-                for a second season for an additional 10 episodes. the series
-                has as well been renewed for a second season for an additional
-                10 episodes.
+                emotion and flat out action, the series has as well been renewed
+                for a second season for an additional 10 episodes.
               </p>
             </div>
           </div>
 
           <div class="mySlides fade">
-            <img src="assets/images/PREVIEW 2.png" style="width: 42%" />
+            <div class="image-slide">
+              <img src="assets/images/PREVIEW 2.png" />
+            </div>
             <div class="text">
-              <p class="title">NEW BOOKS</p>
+              <p class="title">Boy, were we wrong about dinosaurs!</p>
               <p class="content">
-                Spear and Fang continue their journey together with five all-new
-                episodes of Genny Tartakovsky's Primal, premiering Sunday,
-                October 4th at 11:30pm ET/PT on Adult Swim. Combining artistry,
-                emotion and flat our action, the series has as well been renewed
-                for a second season for an additional 10 episodes. the series
-                has as well been renewed for a second season for an additional
-                10 episodes.
+                The ancient Chinese thought they were magical dragons. Some
+                old-time scientists thought that because they were so big, all
+                they could do was float in water. Boy, were they wrong! Even
+                today, once-common notions about dinosaurs are being revised as
+                new discoveries are made.
               </p>
             </div>
           </div>
 
           <div class="mySlides fade">
-            <img src="assets/images/PREVIEW 3.png" style="width: 42%" />
+            <div class="image-slide">
+              <img src="assets/images/PREVIEW 3.png" />
+            </div>
             <div class="text">
-              <p class="title">NEW BOOKS</p>
+              <p class="title">NEW BOOKS ARRIVED!</p>
               <p class="content">
-                Spear and Fang continue their journey together with five all-new
-                episodes of Genny Tartakovsky's Primal, premiering Sunday,
-                October 4th at 11:30pm ET/PT on Adult Swim. Combining artistry,
-                emotion and flat our action, the series has as well been renewed
-                for a second season for an additional 10 episodes. the series
-                has as well been renewed for a second season for an additional
-                10 episodes.
+                Every child who is fascinated by prehistoric beasts will love
+                taking a big bite out of any one of these roaring dinosaur
+                books, which are jam-packed with eye-popping illustrations and
+                fun facts. Ranging from beloved series to compelling nonfiction
+                titles, these books are a great way to ignite your child’s
+                imagination or teach them about fossils, extinction, and all
+                things having to do with dinosaurs.
               </p>
             </div>
           </div>
@@ -99,31 +125,29 @@
         </div>
       </div>
       <div class="catalog-container">
-        <div class="catalog-top">
-          <!-- <p>dino catologue</p> -->
-          <p><span>dino</span><span>catalogue</span></p>
+        <div class="catalog-top" onclick="redirect('catalog')">
+          <p>dino catalogue</p>
         </div>
         <div class="catalog-bottom">
-          <div class="catalog-game"><p>games</p></div>
-          <div class="catalog-book"><p>books</p></div>
-          <div class="catalog-movie"><p>movies</p></div>
+          <div class="catalog-item catalog-game" onclick="redirect('game')">
+            <p>games</p>
+          </div>
+          <div class="catalog-item catalog-book" onclick="redirect('book')">
+            <p>books</p>
+          </div>
+          <div class="catalog-item catalog-movie" onclick="redirect('movie')">
+            <p>movies</p>
+          </div>
         </div>
       </div>
     </main>
-    <!---------------------------------- slidebar ---------------------------------->
-
-    <!---------------x------------------ slidebar -----------------x---------------->
-
-    <!---------------------------------- content ---------------------------------->
-
-    <!---------------x------------------ content -----------------x---------------->
 
     <!---------------x------------------ Main -----------------x---------------->
 
     <!---------------------------------- Footer ---------------------------------->
     <footer class="footer"></footer>
     <!---------------x------------------ Footer -----------------x---------------->
-
     <script src="./js/main.js"></script>
+    <script src="./js/home.js"></script>
   </body>
 </html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/shortcut-icon.png" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <title>DinoZone</title>
+  </head>
+  <body>
+    <!---------------------------------- Top Bar ---------------------------------->
+    <div class="nav">
+      <div class="top-bar">
+        <div class="logo">
+          <a href="index.html"><img src="../assets/LOGO.png" /></a>
+        </div>
+
+        <input type="checkbox" id="overlay-input" />
+        <label for="overlay-input" id="overlay-button"><span></span></label>
+        <div id="overlay">
+          <ul>
+            <li><a href="./index.html">trang chủ</a></li>
+            <li><a href="./catalogue.html">catalogue</a></li>
+            <li><a href="./games.html">games</a></li>
+            <li><a href="./books.html">sách</a></li>
+            <li><a href="./movies.html">phim</a></li>
+            <li>
+              <img
+                class="language"
+                onclick="changeLanguage('en')"
+                src="../assets/CỜ VIỆT MINI.png"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="top-menu">
+          <img
+            class="language"
+            onclick="changeLanguage('en')"
+            src="../assets/CỜ VIỆT MINI.png"
+          />
+          <div class="menu">
+            <div class="menu-item" onclick="redirect('vn-catalog')">
+              <p>catalogue</p>
+            </div>
+            <div class="menu-item" onclick="redirect('vn-game')">
+              <p>games</p>
+            </div>
+            <div class="menu-item" onclick="redirect('vn-book')">
+              <p>sách</p>
+            </div>
+            <div class="menu-item" onclick="redirect('vn-movie')">
+              <p>phim</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------------x------------------ Top Bar -----------------x---------------->
+
+    <!---------------------------------- Main ---------------------------------->
+    <main>
+      <div class="slideshow-container">
+        <div class="border-container">
+          <div class="mySlides fade">
+            <div class="image-slide">
+              <img src="../assets/images/PREVIEW 1.png" />
+            </div>
+            <div class="text">
+              <p class="title">“Primal” của genndy lên sóng!</p>
+              <p class="content">
+                Spear và Fang tiếp tục cuộc hành trình của họ cùng với năm tập
+                phim hoàn toàn mới của Genndy Tartakovsky's Primal, chiếu vào
+                Chủ nhật, ngày 4 tháng 10 lúc 11:30 tối ET / PT trên Adult Swim.
+                Kết hợp giữa nghệ thuật, cảm xúc và hành động, bộ truyện cũng đã
+                được làm mới cho phần thứ hai với 10 tập bổ sung.
+              </p>
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="image-slide">
+              <img src="../assets/images/PREVIEW 2.png" />
+            </div>
+            <div class="text">
+              <p class="title">Chà, chúng ta đã sai về khủng long!</p>
+              <p class="content">
+                Người Trung Quốc cổ đại cho rằng chúng là những con rồng thần
+                kỳ. Một số nhà khoa học thời xưa cho rằng vì chúng quá lớn nên
+                tất cả những gì chúng có thể làm là nổi trong nước. Chà, họ đã
+                sai! Ngày nay, những quan niệm phổ biến một thời về khủng long
+                đang được sửa đổi khi những khám phá mới được thực hiện.
+              </p>
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="image-slide">
+              <img src="../assets/images/PREVIEW 3.png" />
+            </div>
+            <div class="text">
+              <p class="title">sách mới ra lò!</p>
+              <p class="content">
+                Bị mê hoặc bởi những con thú thời tiền sử từ bất kỳ cuốn sách
+                nào trong số những cuốn sách về khủng long gầm rú này, được đóng
+                gói với những hình ảnh minh họa bắt mắt và sự thật thú vị. Từ
+                những bộ truyện được yêu thích đến những tựa sách hấp dẫn, những
+                cuốn sách này là một cách tuyệt vời để khơi dậy trí tưởng tượng
+                của bạn về hóa thạch, sự tuyệt chủng và tất cả những điều liên
+                quan đến khủng long.
+              </p>
+            </div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <div class="group-dot">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </div>
+      <div class="catalog-container">
+        <div class="catalog-top" onclick="redirect('vn-catalog')">
+          <p>danh sách</p>
+          <p>khủng long</p>
+        </div>
+        <div class="catalog-bottom">
+          <div class="catalog-item catalog-game" onclick="redirect('vn-game')">
+            <p>games</p>
+          </div>
+          <div class="catalog-item catalog-book" onclick="redirect('vn-book')">
+            <p>sách</p>
+          </div>
+          <div
+            class="catalog-item catalog-movie"
+            onclick="redirect('vn-movie')"
+          >
+            <p>phim</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!---------------x------------------ Main -----------------x---------------->
+
+    <!---------------------------------- Footer ---------------------------------->
+    <footer class="footer"></footer>
+    <!---------------x------------------ Footer -----------------x---------------->
+    <script src="../js/main.js"></script>
+    <script src="../js/home.js"></script>
+  </body>
+</html>

@@ -1,0 +1,353 @@
+@import url("../css/fonts.css");
+
+html,
+body {
+  background: url("../assets/TRANG\ CHỦ\ MẪU.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/******** Slide ********/
+.mySlides {
+  display: flex;
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+  margin: 5% 0 0 0;
+  max-width: 100%;
+  height: auto;
+  border-top: 1.5rem solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1.5rem solid rgba(255, 255, 255, 0.5);
+}
+
+.border-container {
+  border: orange 0.3vw solid;
+  max-width: 100%;
+  height: auto;
+}
+
+.mySlides {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-slide {
+  max-width: 40%;
+  height: auto;
+}
+
+.image-slide > img {
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Caption text */
+.text {
+  color: var(--text);
+  max-width: 60%;
+  height: auto;
+  background: #ed526e;
+}
+
+.text .title {
+  font-family: var(--Bungee);
+  font-size: 4vw;
+  line-height: 6vw;
+  padding: 0 0 0 2vw;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.text .content {
+  font-family: var(--Roboto_Slab);
+  font-size: 1.2vw;
+  padding: 0 5vw 0 2vw;
+  margin-bottom: 5vh;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 18vw;
+  width: auto;
+  padding: 0.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 8vw;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.group-dot {
+  position: absolute;
+  width: auto;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  left: 44vw;
+  top: 65vh;
+}
+
+.dot {
+  cursor: pointer;
+  height: 2vw;
+  width: 2vw;
+  margin: 0 1vh;
+  background-color: var(--text);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #ffb800;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/**** Catalog ****/
+.catalog-container {
+  margin: auto;
+  margin-top: 12vh;
+  margin-bottom: 15vh;
+  max-width: 90%;
+  height: auto;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.catalog-container .catalog-top {
+  height: auto;
+  max-width: 91%;
+  margin: auto;
+  border-radius: 1rem;
+  border: orange 0.2rem solid;
+  background: url("../assets/DINO\ CATALOGUE.png");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.catalog-container .catalog-top > p {
+  font-size: 8vw;
+  line-height: 6vw;
+  font-family: var(--Bungee);
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text);
+}
+
+.catalog-container .catalog-bottom > div p {
+  font-size: 6vw;
+  font-family: var(--Bungee);
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text);
+  margin: 0;
+}
+
+.catalog-container .catalog-bottom {
+  height: auto;
+  max-width: 92%;
+  margin: auto;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  grid-gap: 2rem 2rem;
+}
+
+.catalog-item {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  border-radius: 1rem;
+  border: orange 0.2rem solid;
+  cursor: pointer;
+}
+
+.catalog-game {
+  background: url("../assets/GAMES.png");
+  background-size: cover;
+}
+
+.catalog-book {
+  background: url("../assets/BOOKS.png");
+  background-size: cover;
+}
+
+.catalog-movie {
+  background: url("../assets/MOVIES.png");
+  background-size: cover;
+}
+
+/******** Footer ********/
+footer.footer {
+  background: url("../assets/FOOTER.png");
+  background-size: cover;
+  height: 6.6vh;
+}
+
+/*              Viewport less then or equal to 1024px            */
+
+@media only screen and (max-width: 1024px) {
+  .nav .top-menu {
+    display: none;
+  }
+
+  #overlay-button span {
+    display: block;
+  }
+
+  .group-dot {
+    left: 44vw;
+    top: 46vh;
+  }
+
+  .text .title {
+    font-size: 4vw;
+    line-height: 6vw;
+    margin: 0.5rem 0;
+  }
+
+  .text .content {
+    font-size: 2.4vw;
+  }
+
+  .prev,
+  .next {
+    top: 35vw;
+    font-size: 8vh;
+  }
+
+  .catalog-container .catalog-bottom {
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-auto-rows: minmax(13vh, auto);
+  }
+}
+
+/*              Viewport less then or equal to 768px            */
+
+@media only screen and (max-width: 768px) {
+  .prev,
+  .next {
+    top: 45vw;
+  }
+}
+
+/*              Viewport less then or equal to 500px            */
+
+@media only screen and (max-width: 500px) {
+  .nav .logo img {
+    width: 80%;
+  }
+  .prev,
+  .next {
+    top: 40vw;
+  }
+
+  .group-dot {
+    left: 44vw;
+    top: 38.5vh;
+  }
+
+  .catalog-container .catalog-bottom {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: minmax(13vh, auto);
+  }
+}
+
+/*              Viewport less then or equal to 411px            */
+
+@media only screen and (max-width: 411px) {
+  .group-dot {
+    top: 38vh;
+  }
+}
+
+/*              Viewport less then or equal to 375px            */
+
+@media only screen and (max-width: 375px) {
+  .group-dot {
+    top: 38vh;
+  }
+
+  .catalog-container .catalog-bottom {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(11vh, auto);
+  }
+}
+
+/*              Viewport less then or equal to 320px            */
+
+@media only screen and (max-width: 320px) {
+  .prev,
+  .next {
+    top: 50vw;
+  }
+
+  .group-dot {
+    left: 44vw;
+    top: 40vh;
+  }
+
+  .catalog-container .catalog-bottom {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/*              Viewport less then or equal to 280px            */
+
+@media only screen and (max-width: 280px) {
+  .group-dot {
+    top: 35vh;
+  }
+}

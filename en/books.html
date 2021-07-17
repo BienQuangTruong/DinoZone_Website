@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/shortcut-icon.png" />
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css" />
+
+    <!-- --------- Custome css ------------------->
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/book.css" />
+    <title>DinoZone</title>
+  </head>
+  <body>
+    <!---------------------------------- Top Bar ---------------------------------->
+    <div class="nav">
+      <div class="top-bar">
+        <div class="logo">
+          <a href="../index.html"><img src="../assets/LOGO.png" /></a>
+        </div>
+
+        <input type="checkbox" id="overlay-input" />
+        <label for="overlay-input" id="overlay-button"><span></span></label>
+        <div id="overlay">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../en/catalogue.html">catalogue</a></li>
+            <li><a href="../en/games.html">games</a></li>
+            <li><a href="../en/books.html">books</a></li>
+            <li><a href="../en/movies.html">movies</a></li>
+            <li>
+              <img
+                class="language"
+                onclick="changeLanguage('vn')"
+                src="../assets/CỜ ANH MINI.png"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="top-menu">
+          <img
+            class="language"
+            onclick="changeLanguage('vn')"
+            src="../assets/CỜ ANH MINI.png"
+          />
+          <div class="menu">
+            <div class="menu-item" onclick="redirect('catalog')">
+              <p>catalogue</p>
+            </div>
+            <div class="menu-item" onclick="redirect('game')">
+              <p>games</p>
+            </div>
+            <div class="menu-item" onclick="redirect('book')">
+              <p>books</p>
+            </div>
+            <div class="menu-item" onclick="redirect('movie')">
+              <p>movies</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------------x------------------ Top Bar -----------------x---------------->
+
+    <!---------------------------------- Main ---------------------------------->
+    <main>
+      <div class="banner">
+        <p>books</p>
+      </div>
+      <div class="book-list">
+        <div class="list-item">
+          <div class="title-list">
+            <p>new books</p>
+          </div>
+          <div class="slidebar">
+            <div class="owl-carousel owl-theme">
+              <div class="item" onclick="show('modal_5')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 5.png" />
+              </div>
+              <div class="item" onclick="show('modal_1')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 1.png" />
+              </div>
+              <div class="item" onclick="show('modal_3')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 3.png" />
+              </div>
+              <div class="item" onclick="show('modal_7')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 7.png" />
+              </div>
+              <div class="item" onclick="show('modal_10')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 10.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="title-list">
+            <p>learning</p>
+          </div>
+          <div class="slidebar">
+            <div class="owl-carousel owl-theme">
+              <div class="item" onclick="show('modal_3')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 3.png" />
+              </div>
+              <div class="item" onclick="show('modal_9')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 9.png" />
+              </div>
+              <div class="item" onclick="show('modal_8')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 8.png" />
+              </div>
+              <div class="item" onclick="show('modal_11')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 11.png" />
+              </div>
+              <div class="item" onclick="show('modal_10')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 10.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="title-list">
+            <p>comics</p>
+          </div>
+          <div class="slidebar">
+            <div class="owl-carousel owl-theme">
+              <div class="item" onclick="show('modal_2')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 2.png" />
+              </div>
+              <div class="item" onclick="show('modal_1')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 1.png" />
+              </div>
+              <div class="item" onclick="show('modal_4')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 4.png" />
+              </div>
+              <div class="item" onclick="show('modal_7')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 7.png" />
+              </div>
+              <div class="item" onclick="show('modal_11')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 11.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list-item">
+          <div class="title-list">
+            <p>favorites</p>
+          </div>
+          <div class="slidebar">
+            <div class="owl-carousel owl-theme">
+              <div class="item" onclick="show('modal_5')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 5.png" />
+              </div>
+              <div class="item" onclick="show('modal_2')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 2.png" />
+              </div>
+              <div class="item" onclick="show('modal_9')">
+                <img src="/../assets/BOOKS/MAIN_SITE/BOOK 9.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!---------------------------------- Modal ---------------------------------->
+
+      <!-- The Modal 1 -->
+      <div id="modal_1" class="modal">
+        <img
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          class="close"
+          onclick="closeModal()"
+        />
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="../assets/BOOKS/BOOK_INFO/BOOK INFO 1.png" />
+          </div>
+          <div class="modal-body">
+            <h2>how do dinosaurs say goodnight?</h2>
+            <p>
+              Throw a triceratops and pteranodon into the mix, and bedtime
+              becomes markedly more fun. This book breaks down exactly how
+              dinosaurs say good night. Is it when dad turns off the light?
+            </p>
+            <div class="bottom-btn">
+              <p>read online</p>
+            </div>
+            <div class="bottom-btn">
+              <p>favorites</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- The Modal 2 -->
+      <div id="modal_2" class="modal">
+        <img
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          class="close"
+          onclick="closeModal()"
+        />
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="../assets/BOOKS/BOOK_INFO/BOOK INFO 2.png" />
+          </div>
+          <div class="modal-body">
+            <h2>DINOSAURS LOVE UNDERPANTS</h2>
+            <p>
+              Dinosaurs Love Underpants is not one of these books – but if
+              you’ve ever wondered how underpants might have factored into the
+              extinction of dinosaurs, your answer might be found within these
+              pages.
+            </p>
+            <div class="bottom-btn">
+              <p>read online</p>
+            </div>
+            <div class="bottom-btn">
+              <p>favorites</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- The Modal 3 -->
+      <div id="modal_3" class="modal">
+        <img
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          class="close"
+          onclick="closeModal()"
+        />
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="../assets/BOOKS/BOOK_INFO/BOOK INFO 3.png" />
+          </div>
+          <div class="modal-body">
+            <h2>the enormous egg</h2>
+            <p>
+              It’s E.T. meets Charlotte’s Web as exploitative businessmen,
+              stuffy scientists and duplicitous senators try to have their way
+              with Uncle Beazley. Nate quickly learns he’s got something far
+              more valuable.
+            </p>
+            <div class="bottom-btn">
+              <p>read online</p>
+            </div>
+            <div class="bottom-btn">
+              <p>favorites</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- The Modal 4 -->
+      <div id="modal_4" class="modal">
+        <img
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          class="close"
+          onclick="closeModal()"
+        />
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="../assets/BOOKS/BOOK_INFO/BOOK INFO 4.png" />
+          </div>
+          <div class="modal-body">
+            <h2>TEA REX</h2>
+            <p>
+              Odds are, you’ve heard the expression “bull in a china shop.” The
+              central concept of Molly Idle’s Tea Rex is a bit like that, except
+              Tyrannosaurus rex attending a tea party.
+            </p>
+            <div class="bottom-btn">
+              <p>read online</p>
+            </div>
+            <div class="bottom-btn">
+              <p>favorites</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- The Modal 5 -->
+      <div id="modal_5" class="modal">
+        <img
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          class="close"
+          onclick="closeModal()"
+        />
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="../assets/BOOKS/BOOK_INFO/BOOK INFO 5.png" />
+          </div>
+          <div class="modal-body">
+            <h2>the good dinosaur</h2>
+            <p>
+              Arlo is a big dinosaur with an even bigger heart and plenty of
+              joie de vivre. But his family is dealing with some trauma, so Arlo
+              befriends a little human boy and gains a very unlikely buddy.
+            </p>
+            <div class="bottom-btn">
+              <p>read online</p>
+            </div>
+            <div class="bottom-btn">
+              <p>favorites</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- The Modal 7 -->
+      <div id="modal_7" class="modal">
+        <img
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          class="close"
+          onclick="closeModal()"
+        />
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="../assets/BOOKS/BOOK_INFO/BOOK INFO 7.png" />
+          </div>
+          <div class="modal-body">
+            <h2>TINY T. REX AND THE VERY DARK DARK</h2>
+            <p>
+              Tiny T. Rex and his buddy Pointy are having a campout, only they
+              sort of freak out because they're scared of the dark.
+            </p>
+            <div class="bottom-btn">
+              <p>read online</p>
+            </div>
+            <div class="bottom-btn">
+              <p>favorites</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- The Modal 8 -->
+      <div id="modal_8" class="modal">
+        <img
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          class="close"
+          onclick="closeModal()"
+        />
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="../assets/BOOKS/BOOK_INFO/BOOK INFO 8.png" />
+          </div>
+          <div class="modal-body">
+            <h2>THE DINOSAUR BOOK</h2>
+            <p>
+              We're talking the tyrannosaurus, hadrosaur, quetzalcoatlus and
+              stegosaurus, just for starters. The pictures are absolutely
+              magical, and this book brings ancient history to life.
+            </p>
+            <div class="bottom-btn">
+              <p>read online</p>
+            </div>
+            <div class="bottom-btn">
+              <p>favorites</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- The Modal 9 -->
+      <div id="modal_9" class="modal">
+        <img
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          class="close"
+          onclick="closeModal()"
+        />
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="../assets/BOOKS/BOOK_INFO/BOOK INFO 9.png" />
+          </div>
+          <div class="modal-body">
+            <h2>THE COMPLETE BOOK OF DINOSAUR</h2>
+            <p>
+              Expect this one to last over many, many bedtimes This dense
+              compendium covers the known and lesser-known species of dinosaurs,
+              their habitats, time-periods and behavior in descriptive
+              paragraphs accented by traditional illustrations.
+            </p>
+            <div class="bottom-btn">
+              <p>read online</p>
+            </div>
+            <div class="bottom-btn">
+              <p>favorites</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- The Modal 10 -->
+      <div id="modal_10" class="modal">
+        <img
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          class="close"
+          onclick="closeModal()"
+        />
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="../assets/BOOKS/BOOK_INFO/BOOK INFO 10.png" />
+          </div>
+          <div class="modal-body">
+            <h2>THE DINOSAUR ATLAS</h2>
+            <p>
+              Kids can unfold maps and lift the flaps to reveal amazing facts
+              and illustrations about how they lived and where they were
+              discovered. They'll also learn about famous paleontologists and
+              measure themselves against life-size bones, teeth and claws.
+            </p>
+            <div class="bottom-btn">
+              <p>read online</p>
+            </div>
+            <div class="bottom-btn">
+              <p>favorites</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- The Modal 11 -->
+      <div id="modal_11" class="modal">
+        <img
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          class="close"
+          onclick="closeModal()"
+        />
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="../assets/BOOKS/BOOK_INFO/BOOK INFO 11.png" />
+          </div>
+          <div class="modal-body">
+            <h2>HOW ANIMALS BUILD</h2>
+            <p>
+              From spider webs and rabbit warrens, to bird nests and ant
+              colonies, and even coral reefs and beaver lodges, we reveal the
+              secrets to these extraordinary structures and how they're built.
+            </p>
+            <div class="bottom-btn">
+              <p>read online</p>
+            </div>
+            <div class="bottom-btn">
+              <p>favorites</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-------------x-------------------- Modal -------------------x-------------->
+    </main>
+
+    <!---------------x------------------ Main -----------------x---------------->
+
+    <!---------------------------------- Footer ---------------------------------->
+    <footer class="footer"></footer>
+    <!---------------x------------------ Footer -----------------x---------------->
+
+    <!-- Jquery Library file -->
+    <script src="../js/Jquery3.6.0.min.js"></script>
+
+    <!-- Owl-Carousel js -->
+    <script src="../js/owl.carousel.min.js"></script>
+
+    <!-- Custome Javascript file -->
+    <script src="../js/main.js"></script>
+    <script src="../js/book.js"></script>
+  </body>
+</html>

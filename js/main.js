@@ -1,30 +1,55 @@
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+function redirect(site) {
+  switch (site) {
+    case "catalog":
+      window.location.href = "../en/catalogue.html";
+      break;
+    case "game":
+      window.location.href = "../en/games.html";
+      break;
+    case "book":
+      window.location.href = "../en/books.html";
+      break;
+    case "movie":
+      window.location.href = "../en/movies.html";
+      break;
+    case "vn-catalog":
+      window.location.href = "../vn/catalogue.html";
+      break;
+    case "vn-game":
+      window.location.href = "../vn/games.html";
+      break;
+    case "vn-book":
+      window.location.href = "../vn/books.html";
+      break;
+    case "vn-movie":
+      window.location.href = "../vn/movies.html";
+      break;
+    default:
+      window.location.href = "../index.html";
+      break;
+  }
 }
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
+// $(document).ready(function () {
+//   $("language .en-language").click(function () {
+//     window.location.href = "../vn/index.html";
+//   });
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
+//   $("#vn-language").click(function () {
+//     window.location.href = "../index.html";
+//   });
+// });
+
+function changeLanguage(n) {
+  switch (n) {
+    case "vn":
+      window.location.href = "../vn/index.html";
+      break;
+    case "en":
+      window.location.href = "../index.html";
+      break;
+    default:
+      window.location.href = "../index.html";
+      break;
   }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
 }

@@ -2,223 +2,11 @@
 
 html,
 body {
-  margin: 0%;
-  box-sizing: border-box;
-  overflow-x: hidden;
-
   background: url("../assets/CATALOGUE/BG/FULL/FULL\ BG.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-}
-
-:root {
-  /*      theme font-family   */
-  --Bungee: "Bungee", cursive;
-  --Kavoon: "Kavoon", cursive;
-  --Roboto_Slab: "Roboto_Slab", cursive;
-
-  /*      theme font-color  */
-  --text: #fffadc;
-}
-
-.nav {
-  background: url("../assets/TOP\ BAR.png");
-  background-size: cover;
-  height: 11.5vh;
-}
-
-.top-bar {
-  width: 100%;
-  justify-content: space-between;
-}
-
-.nav .toggle-collapse {
-  position: absolute;
-  top: 0%;
-  width: 90%;
-  height: auto;
-  cursor: pointer;
-  display: initial;
-}
-
-.nav .toggle-collapse .toggle-icons {
-  display: flex;
-  justify-content: flex-end;
-  padding: 1.7rem 0;
-}
-
-.nav .toggle-collapse .toggle-icons i {
-  font-size: 3rem;
-  color: var(--text);
-}
-
-.collapse {
-  height: 30rem;
-}
-
-.nav .logo {
-  /* max-width: 100%; */
-  margin: 2rem 0;
-  position: absolute;
-  /* margin: 1.35rem -0.7rem; */
-}
-
-.nav .logo > img {
-  max-width: 100%;
-  height: auto;
-}
-
-.top-bar .top-menu {
-  float: right;
-  margin: 1rem 2.5rem;
-  display: block;
-  width: 60%;
-}
-
-.top-bar .top-menu .language {
-  float: right;
-  width: 4vw;
-  border: #fff solid;
-  border-radius: 1rem;
-}
-
-.top-bar .top-menu .menu {
-  position: relative;
-  width: 100%;
-  display: flex;
-  height: auto;
-  justify-content: space-around;
-}
-
-.top-bar .top-menu .menu .menu-item {
-  background: url("../assets/NÚT.png");
-  background-size: cover;
-  /* margin-right: 3rem; */
-  color: var(--text);
-  width: 100%;
-  height: auto;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.top-bar .top-menu .menu .menu-item > p {
-  /* vertical-align: middle; */
-  font-size: 1vw;
-  text-transform: uppercase;
-  font-family: var(--Kavoon);
-  /* margin: 1rem 0 0 0; */
-}
-
-/***************  menu-mobile  *******************/
-
-#overlay-button {
-  position: absolute;
-  right: 2em;
-  top: 3em;
-  padding: 26px 11px;
-  z-index: 5;
-  cursor: pointer;
-  user-select: none;
-}
-#overlay-button span {
-  height: 4px;
-  width: 8vw;
-  border-radius: 2px;
-  background-color: var(--text);
-  position: relative;
-  display: none;
-  transition: all 0.2s ease-in-out;
-}
-#overlay-button span:before {
-  top: -10px;
-  visibility: visible;
-}
-#overlay-button span:after {
-  top: 10px;
-}
-#overlay-button span:before,
-#overlay-button span:after {
-  height: 4px;
-  width: 8vw;
-  border-radius: 2px;
-  background-color: var(--text);
-  position: absolute;
-  content: "";
-  transition: all 0.2s ease-in-out;
-}
-#overlay-button:hover span,
-#overlay-button:hover span:before,
-#overlay-button:hover span:after {
-  background: var(--text);
-}
-input[type="checkbox"] {
-  display: none;
-}
-input[type="checkbox"]:checked ~ #overlay {
-  visibility: visible;
-}
-input[type="checkbox"]:checked ~ #overlay-button:hover span,
-input[type="checkbox"]:checked ~ #overlay-button span {
-  background: transparent;
-}
-input[type="checkbox"]:checked ~ #overlay-button span:before {
-  transform: rotate(45deg) translate(7px, 7px);
-  opacity: 1;
-}
-input[type="checkbox"]:checked ~ #overlay-button span:after {
-  transform: rotate(-45deg) translate(7px, -7px);
-}
-#overlay {
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.5s;
-  animation-name: animatetop;
-  animation-duration: 0.5s;
-  height: 100vh;
-  width: 100%;
-  background: #c1d82f;
-  z-index: 2;
-  visibility: hidden;
-  position: fixed;
-}
-#overlay.active {
-  visibility: visible;
-}
-#overlay ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  height: 100vh;
-  padding-left: 0;
-  list-style-type: none;
-}
-#overlay ul li {
-  padding: 1em;
-}
-#overlay ul li a {
-  text-transform: uppercase;
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-  line-height: 2rem;
-  font-family: var(--Bungee);
-}
-#overlay ul li a:hover {
-  color: #ffb800;
-}
-
-/******** Main ********/
-main {
-  /* width: 100%; */
-  /* height: 400vh; */
-  justify-content: center;
-  height: 100%;
-  /* overflow: hidden; */
 }
 
 #all-catalogue {
@@ -244,7 +32,7 @@ main .banner {
 }
 
 main .banner > p {
-  font-size: 10vw;
+  font-size: 7vw;
   font-family: var(--Bungee);
   text-transform: uppercase;
   text-align: center;
@@ -363,7 +151,7 @@ main .catalogue .catalogue-list {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
@@ -374,7 +162,8 @@ main .catalogue .catalogue-list {
   position: relative;
   background: url("../assets/CATALOGUE/DINO\ INFO/INFO BG/KHUNG.png") no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
+  /* position: fixed; */
   margin: auto;
   padding: 0;
   max-width: 41%;
@@ -525,7 +314,7 @@ main .catalogue .catalogue-list {
 }
 
 .modal-body > h2 {
-  font-size: 4vw;
+  font-size: 3vw;
   text-transform: uppercase;
   font-family: var(--Bungee);
   text-shadow: 2px 2px 4px #2c2b2b;
@@ -869,35 +658,7 @@ footer.footer {
   #overlay-button span {
     display: block;
   }
-
-  /* .nav .toggle-collapse {
-    display: initial;
-  } */
-
-  /* .thumbnail img {
-    margin: 0 5rem;
-  } */
 }
-
-/*              Viewport less then or equal to 1368px            */
-
-/* @media only screen and (max-width: 1368px) {
-  .cards {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  }
-
-  .thumbnail img {
-    margin: 0 3rem;
-  }
-} */
-
-/*              Viewport less then or equal to 1130px            */
-
-/* @media only screen and (max-width: 1130px) {
-  main {
-    height: 1200vh;
-  }
-} */
 
 /*              Viewport less then or equal to 768px            */
 
@@ -917,7 +678,6 @@ footer.footer {
 
   .card {
     right: 18%;
-    /* left: 14%; */
   }
 }
 
@@ -929,7 +689,7 @@ footer.footer {
   }
 
   .cards {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 
   .card {

@@ -2,10 +2,6 @@
 
 html,
 body {
-  margin: 0%;
-  box-sizing: border-box;
-  overflow-x: hidden;
-
   background: url("../assets/BOOKS/MAIN_SITE/BACKGROUND\ FILL\ GIỮ\ CỐ\ ĐỊNH.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,145 +9,68 @@ body {
   background-position: center;
 }
 
-:root {
-  /*      theme font-family   */
-  --Bungee: "Bungee", cursive;
-  --Kavoon: "Kavoon", cursive;
-  --Roboto_Slab: "Roboto_Slab", cursive;
-
-  /*      theme font-color  */
-  --text: #fffadc;
-}
-
-.nav {
-  background-size: cover;
-  background: url("../assets/TOP\ BAR.png");
-  height: 11.5vh;
-}
-
-.top-bar-left {
-  width: 100%;
-  justify-content: space-between;
-}
-
-.top-bar-left .logo {
-  width: 30%;
-  margin: 1.35rem -0.7rem;
-}
-
-.top-bar-left .top-menu {
-  float: right;
-  margin: 1rem 2.5rem;
-  display: block;
-  width: 60%;
-}
-
-.top-bar-left .top-menu .language {
-  float: right;
-  width: 6%;
-}
-
-.top-bar-left .top-menu .menu {
-  position: relative;
-  width: 100%;
-  display: flex;
-  /* margin: 2rem 5rem 0 0; */
-  justify-content: space-between;
-}
-
-.top-bar-left .top-menu .menu .menu-item {
-  /* margin: 0.5rem 2rem 0 0rem; */
-  margin-right: 3rem;
-  color: var(--text);
-  width: 100%;
-  position: relative;
-}
-
-.top-bar-left .top-menu .menu .menu-item > img {
-  position: absolute;
-  width: 120%;
-  z-index: 1;
-  min-width: 10rem;
-}
-
-.top-bar-left .top-menu .menu .menu-item > p {
-  width: 120%;
-  position: relative;
-  z-index: 100;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 24px;
-  text-transform: uppercase;
-  font-family: var(--Kavoon);
-  margin: 1rem 0 0 0;
-}
-
-/******** Main ********/
-main {
-  /* width: 100%; */
-  height: 200vh;
-  justify-content: center;
-  /* overflow: hidden; */
-}
-
 /******** Banner ********/
 
 main .banner {
-  width: 100%;
-  height: 30%;
-  background: url("../assets/MOVIES/MAIN_SITE/BANNER.png");
-  background-size: cover;
   border: orange 0.2rem solid;
+  background: url("../assets/CATALOGUE/ROOT_BANNER/MOVIES-ROOT.jpg");
+  background-size: cover;
 }
 
 main .banner > p {
-  font-size: 9rem;
+  font-size: 10vw;
   font-family: var(--Bungee);
   text-transform: uppercase;
   text-align: center;
   color: var(--text);
   text-shadow: 0.5rem 0.5rem 0.75rem #2c2b2b;
+  line-height: 15vw;
 }
 
 /******** Movie list ********/
 
 main .movie-list {
-  width: 90%;
-  height: 70%;
+  max-width: 90%;
+  height: auto;
   margin: 0 4.5%;
   background-size: cover;
   border: orange 0.2rem solid;
   background: rgba(255, 255, 255, 0.5);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  grid-gap: 5em 0;
 }
 
 main .movie-list .movie-item {
-  width: 38%;
-  height: 34%;
-  margin: 6%;
+  max-width: 80%;
+  height: auto;
+  margin: auto;
   background: url("../assets/MOVIES/INFO/INFO\ BACKGROUND.png");
-  float: left;
+  background-size: cover;
   border-radius: 1rem;
-  overflow: hidden;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 main .movie-list .movie-item .movie-image {
-  width: 100%;
-  height: 80%;
+  max-width: 100%;
+  height: auto;
   display: flex;
+  margin-top: 1vh;
 }
 
 main .movie-list .movie-item .movie-image > img {
-  display: block;
   margin: auto;
-  width: 96%;
-  height: 94%;
+  max-width: 96%;
   cursor: pointer;
 }
 
 main .movie-list .movie-item .movie-control {
-  width: 100%;
-  height: 20%;
-  display: inline-flex;
+  max-width: 100%;
+  margin: 2rem;
+  height: auto;
+  display: flex;
 }
 
 main .movie-list .movie-item .movie-control .info-btn {
@@ -164,7 +83,7 @@ main .movie-list .movie-item .movie-control .info-btn {
 
 main .movie-list .movie-item .movie-control .info-btn > p {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3vw;
   text-transform: uppercase;
   font-family: var(--Bungee);
   color: var(--text);
@@ -187,7 +106,7 @@ main .movie-list .movie-item .movie-control .info-btn > p {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
@@ -196,12 +115,12 @@ main .movie-list .movie-item .movie-control .info-btn > p {
 
 .modal-content {
   position: relative;
-  background: url("../assets/BOOKS/BOOK_INFO/BACKGROUND\ INFO\ SÁCH.png")
-    no-repeat;
+  background: url("../assets/BOOKS/BOOK_INFO/BACKGROUND\ INFO\ SÁCH.png");
+  background-size: cover;
   margin: auto;
   padding: 0;
-  width: 42%;
-  height: 84%;
+  max-width: 42%;
+  height: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 1rem;
   overflow: hidden;
@@ -230,6 +149,7 @@ main .movie-list .movie-item .movie-control .info-btn > p {
 .close {
   position: absolute;
   padding: 1% 70%;
+  width: 5vw;
 }
 
 .close:hover,
@@ -240,17 +160,17 @@ main .movie-list .movie-item .movie-control .info-btn > p {
 }
 
 .modal-header {
-  background-size: cover;
-  width: 100%;
-  height: 47%;
+  max-width: 100%;
+  height: auto;
   border-radius: 1rem;
   display: flex;
 }
 
 .modal-header > img {
+  position: relative;
   margin: auto;
-  width: 94%;
-  display: block;
+  margin-top: 0.2rem;
+  max-width: 100%;
 }
 
 .modal-body {
@@ -260,26 +180,28 @@ main .movie-list .movie-item .movie-control .info-btn > p {
 }
 
 .modal-body > h2 {
-  font-size: 3rem;
+  font-size: 2vw;
   text-transform: uppercase;
   font-family: var(--Bungee);
   text-shadow: 2px 2px 4px #2c2b2b;
   text-align: center;
-  margin: auto;
+  margin: 0;
 }
 
 .modal-body > p {
-  margin: auto;
-  padding: 0 10%;
+  padding: 0 1%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1vw;
+  margin: 0;
+  font-family: "Roboto_Slab";
 }
 
 .modal-body .bottom-btn {
-  background: url("../assets/NÚT.png") no-repeat;
+  background: url("../assets/NÚT.png");
   background-size: cover;
-  width: 40%;
-  height: 11%;
+  background-size: cover;
+  max-width: 40%;
+  height: auto;
   margin: auto;
   cursor: pointer;
 }
@@ -312,47 +234,35 @@ main .movie-list .movie-item .movie-control .info-btn > p {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 .modal-content-watch {
   position: relative;
+  background: rgba(255, 255, 255, 0.5);
   margin: auto;
   padding: 0;
-  width: 85%;
-  height: 85%;
+  max-width: 85%;
+  height: auto;
   border: orange 0.2rem solid;
-  background: rgba(255, 255, 255, 0.5);
   border-radius: 1rem;
   overflow: hidden;
-  display: block;
 }
 
 .modal-content-watch .movie-screen {
-  width: 96%;
-  height: 92%;
-  background-size: cover;
-  margin: 2rem;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
   z-index: 101;
+  display: flex;
 }
 
 .movie-screen > img {
-  width: 100%;
-  height: 100%;
-}
-
-.play-btn {
-  width: auto;
+  max-width: 100%;
   height: auto;
-  position: fixed;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 103;
+  cursor: pointer;
 }
 
 /******** Footer ********/
@@ -362,28 +272,127 @@ footer.footer {
   height: 6.6vh;
 }
 
-/*              Viewport less then or equal to 1130px            */
+/*              Viewport less then or equal to 1024px            */
 
-@media only screen and (max-width: 1130px) {
-  .nav .top-bar-left .top-menu .menu .menu-item > p {
-    font-size: 12px;
+@media only screen and (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+
+  .modal-content,
+  .close {
+    top: 20%;
+  }
+
+  .close {
+    padding: 5% 70%;
+  }
+
+  .indicator-index {
+    height: 1.5rem !important;
+  }
+
+  .modal-content {
+    max-width: 90%;
+  }
+
+  .modal-body > h2 {
+    font-size: 6vw;
+  }
+
+  .modal-body > p {
+    font-size: 3vw;
+  }
+
+  main .banner > p {
+    font-size: 15vw;
+    line-height: 20vw;
+  }
+
+  .nav .top-menu {
+    display: none;
+  }
+
+  #overlay-button span {
+    display: block;
+  }
+
+  main .movie-list .movie-item .movie-control .info-btn {
+    width: 100%;
+  }
+
+  main .movie-list .movie-item .movie-control .info-btn > p {
+    font-size: 2.5vw;
+  }
+
+  .modal-watch {
+    padding-top: 50%;
   }
 }
 
-/*              Viewport less then or equal to 750px            */
+/*              Viewport less then or equal to 768px            */
 
-@media only screen and (max-width: 750px) {
-  .nav .top-bar-left,
-  .nav .top-menu,
-  .nav .menu {
-    flex-direction: column;
+@media only screen and (max-width: 768px) {
+  .thumbnail img {
+    width: 60%;
   }
 
-  .nav .top-bar-left .top-menu .language {
-    /* display: none; */
+  .indicator-index {
+    height: 1rem !important;
   }
 
-  .nav .toggle-collapse {
-    display: initial;
+  .card {
+    right: 18%;
+  }
+
+  .modal-header > img {
+    margin-top: 0;
+  }
+}
+
+/*              Viewport less then or equal to 500px            */
+
+@media only screen and (max-width: 500px) {
+  .nav .logo > img {
+    width: 80%;
+  }
+
+  .modal-body .bottom-btn > p {
+    font-size: 3.2vw;
+    line-height: 2.2rem;
+  }
+
+  main .movie-list .movie-item {
+    max-width: 50%;
+    margin: 2rem 2rem;
+  }
+
+  main .movie-list {
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  }
+
+  main .movie-list .movie-item .movie-control .info-btn > p {
+    font-size: 3vw;
+    line-height: 2rem;
+  }
+
+  main .movie-list .movie-item .movie-control {
+    margin: 0.5rem;
+  }
+}
+
+/*              Viewport less then or equal to 375px            */
+
+@media only screen and (max-width: 375px) {
+  main .movie-list {
+    grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+  }
+}
+
+/*              Viewport less then or equal to 320px            */
+
+@media only screen and (max-width: 320px) {
+  main .movie-list {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   }
 }

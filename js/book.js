@@ -7,7 +7,7 @@ $(".owl-carousel").owlCarousel({
   navText: [" ", " "],
   responsive: {
     0: {
-      items: 1,
+      items: 2,
     },
     600: {
       items: 3,
@@ -32,18 +32,6 @@ function show(clicked_id) {
 function closeModal() {
   modal.style.display = "none";
 }
-
-// var modal = document.getElementsByClassName("modal")[id];
-// var btn = document.getElementsByClassName("item")[id];
-// var span = document.getElementsByClassName("close")[id];
-
-// btn.onclick = function () {
-//   modal.style.display = "block";
-// };
-
-// span.onclick = function () {
-//   modal.style.display = "none";
-// };
 
 window.onclick = function (event) {
   if (event.target == modal) {

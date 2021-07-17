@@ -7,51 +7,61 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
+    <link rel="shortcut icon" href="../assets/shortcut-icon.png" />
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="./css/all.css" />
-
-    <!-- --------- Owl-Carousel ------------------->
-    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="../css/all.css" />
 
     <!-- --------- Custome css ------------------->
-    <link rel="stylesheet" href="./css/catalogue.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/catalogue.css" />
     <title>DinoZone</title>
   </head>
   <body>
     <!---------------------------------- Top Bar ---------------------------------->
     <div class="nav">
       <div class="top-bar">
-        <div class="logo"><img src="assets/LOGO.png" /></div>
+        <div class="logo">
+          <a href="index.html"><img src="../assets/LOGO.png" /></a>
+        </div>
 
         <input type="checkbox" id="overlay-input" />
         <label for="overlay-input" id="overlay-button"><span></span></label>
         <div id="overlay">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">catalogue</a></li>
-            <li><a href="#">games</a></li>
-            <li><a href="#">books</a></li>
-            <li><a href="#">movies</a></li>
-            <li><img class="language" src="assets/CỜ ANH MINI.png" /></li>
+            <li><a href="./index.html">trang chủ</a></li>
+            <li><a href="./catalogue.html">catalogue</a></li>
+            <li><a href="./games.html">games</a></li>
+            <li><a href="./books.html">sách</a></li>
+            <li><a href="./movies.html">phim</a></li>
+            <li>
+              <img
+                class="language"
+                onclick="changeLanguage('en')"
+                src="../assets/CỜ VIỆT MINI.png"
+              />
+            </li>
           </ul>
         </div>
 
         <div class="top-menu">
-          <img class="language" src="assets/CỜ ANH MINI.png" />
+          <img
+            class="language"
+            onclick="changeLanguage('en')"
+            src="../assets/CỜ VIỆT MINI.png"
+          />
           <div class="menu">
-            <div class="menu-item">
+            <div class="menu-item" onclick="redirect('vn-catalog')">
               <p>catalogue</p>
             </div>
-            <div class="menu-item">
+            <div class="menu-item" onclick="redirect('vn-game')">
               <p>games</p>
             </div>
-            <div class="menu-item">
-              <p>books</p>
+            <div class="menu-item" onclick="redirect('vn-book')">
+              <p>sách</p>
             </div>
-            <div class="menu-item">
-              <p>movies</p>
+            <div class="menu-item" onclick="redirect('vn-movie')">
+              <p>phim</p>
             </div>
           </div>
         </div>
@@ -86,7 +96,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 1.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 1.png"
                 onclick="show('modal_1')"
               />
             </picture>
@@ -95,7 +105,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 2.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 2.png"
                 onclick="show('modal_2')"
               />
             </picture>
@@ -104,7 +114,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 3.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 3.png"
                 onclick="show('modal_3')"
               />
             </picture>
@@ -113,7 +123,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 4.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 4.png"
                 onclick="show('modal_4')"
               />
             </picture>
@@ -122,7 +132,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 5.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 5.png"
                 onclick="show('modal_5')"
               />
             </picture>
@@ -131,7 +141,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 6.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 6.png"
                 onclick="show('modal_6')"
               />
             </picture>
@@ -141,7 +151,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 7.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 7.png"
                 onclick="show('modal_7')"
               />
             </picture>
@@ -150,7 +160,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 8.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 8.png"
                 onclick="show('modal_8')"
               />
             </picture>
@@ -159,7 +169,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 9.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 9.png"
                 onclick="show('modal_9')"
               />
             </picture>
@@ -168,7 +178,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 10.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 10.png"
                 onclick="show('modal_10')"
               />
             </picture>
@@ -177,7 +187,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 11.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 11.png"
                 onclick="show('modal_11')"
               />
             </picture>
@@ -186,7 +196,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 12.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 12.png"
                 onclick="show('modal_12')"
               />
             </picture>
@@ -196,7 +206,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 13.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 13.png"
                 onclick="show('modal_13')"
               />
             </picture>
@@ -205,7 +215,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 14.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 14.png"
                 onclick="show('modal_14')"
               />
             </picture>
@@ -214,7 +224,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 15.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 15.png"
                 onclick="show('modal_15')"
               />
             </picture>
@@ -223,7 +233,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 16.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 16.png"
                 onclick="show('modal_16')"
               />
             </picture>
@@ -232,7 +242,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 17.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 17.png"
                 onclick="show('modal_17')"
               />
             </picture>
@@ -241,7 +251,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 18.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 18.png"
                 onclick="show('modal_18')"
               />
             </picture>
@@ -253,7 +263,7 @@
     <!-------------- Land Catalogue -------------->
     <main id="land-catalogue">
       <div id="land-banner" class="banner">
-        <p>land dinosaurs</p>
+        <p>khủng long trên cạn</p>
       </div>
       <div class="catalogue">
         <div class="title-item">
@@ -275,7 +285,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 1.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 1.png"
                 onclick="show('modal_1')"
               />
             </picture>
@@ -284,7 +294,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 2.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 2.png"
                 onclick="show('modal_2')"
               />
             </picture>
@@ -293,7 +303,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 3.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 3.png"
                 onclick="show('modal_3')"
               />
             </picture>
@@ -302,7 +312,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 4.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 4.png"
                 onclick="show('modal_4')"
               />
             </picture>
@@ -311,7 +321,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 5.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 5.png"
                 onclick="show('modal_5')"
               />
             </picture>
@@ -320,7 +330,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 6.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 6.png"
                 onclick="show('modal_6')"
               />
             </picture>
@@ -330,7 +340,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 7.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 7.png"
                 onclick="show('modal_7')"
               />
             </picture>
@@ -339,7 +349,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 8.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 8.png"
                 onclick="show('modal_8')"
               />
             </picture>
@@ -348,7 +358,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 9.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 9.png"
                 onclick="show('modal_9')"
               />
             </picture>
@@ -357,7 +367,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 10.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 10.png"
                 onclick="show('modal_10')"
               />
             </picture>
@@ -369,7 +379,7 @@
     <!-------------- Sea Catalogue -------------->
     <main id="sea-catalogue">
       <div id="sea-banner" class="banner">
-        <p>sea dinosaurs</p>
+        <p>khủng long dưới nước</p>
       </div>
       <div class="catalogue">
         <div class="title-item">
@@ -391,7 +401,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 15.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 15.png"
                 onclick="show('modal_15')"
               />
             </picture>
@@ -400,7 +410,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 16.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 16.png"
                 onclick="show('modal_16')"
               />
             </picture>
@@ -409,7 +419,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 17.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 17.png"
                 onclick="show('modal_17')"
               />
             </picture>
@@ -418,7 +428,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 18.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 18.png"
                 onclick="show('modal_18')"
               />
             </picture>
@@ -430,7 +440,7 @@
     <!-------------- Air Catalogue -------------->
     <main id="air-catalogue">
       <div id="air-banner" class="banner">
-        <p>air dinosaurs</p>
+        <p>khủng long bay</p>
       </div>
       <div class="catalogue">
         <div class="title-item">
@@ -452,7 +462,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 11.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 11.png"
                 onclick="show('modal_11')"
               />
             </picture>
@@ -461,7 +471,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 12.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 12.png"
                 onclick="show('modal_12')"
               />
             </picture>
@@ -471,7 +481,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 13.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 13.png"
                 onclick="show('modal_13')"
               />
             </picture>
@@ -480,7 +490,7 @@
           <article class="card">
             <picture class="thumbnail">
               <img
-                src="assets/CATALOGUE/DINO AVATAR/DINO 14.png"
+                src="../assets/CATALOGUE/DINO AVATAR/DINO 14.png"
                 onclick="show('modal_14')"
               />
             </picture>
@@ -495,7 +505,7 @@
       <!-- The Modal 1 -->
       <div id="modal_1" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -505,26 +515,25 @@
           <div class="modal-body">
             <h2>tyrannosaurus</h2>
             <p>
-              Tyrannosaurus was a bipedal carnivore with a massive skull
-              balanced by a long, heavy tail. Powerful hind limbs, the forelimbs
-              of were short but unusually powerful for their size, and they had
-              two clawed digits. It was a quite smart and the largest apex
-              predator.
+              Tyrannosaurus là loài ăn thịt đi bằng hai chân, tay của nó ngắn
+              nhưng đặc biệt mạnh so với kích thước của nó và có hai ngón có
+              móng vuốt. Nó khá thông minh dù có cơ thể to lớn và là động vật ăn
+              thịt đứng đầu chuỗi thức ăn.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-1-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-1-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-1-3" class="indicator-index"></div>
               </div>
@@ -536,7 +545,7 @@
       <!-- The Modal 2 -->
       <div id="modal_2" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -546,25 +555,25 @@
           <div class="modal-body">
             <h2>CARNOTAURUS</h2>
             <p>
-              Carnotaurus was a lightly built predator, measuring 7.5 to 9m long
-              and weighing at 1.35 tons. The distinctive horns and the muscular
-              neck may have been used in fighting it was adapted for running and
-              was possibly one of the fastest large dinos.
+              Carnotaurus là động vật ăn thịt dài 8 đến 9 mét và nặng ít nhất
+              1,35 tấn. Nó có sừng dày trên mắt và cái cổ đầy cơ bắp có thể được
+              sử dụng để chiến đấu và là một trong những khủng long chân thú lớn
+              chạy nhanh nhất.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-2-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-2-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-2-3" class="indicator-index"></div>
               </div>
@@ -576,7 +585,7 @@
       <!-- The Modal 3 -->
       <div id="modal_3" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -586,25 +595,25 @@
           <div class="modal-body">
             <h2>DEINONYCHUS</h2>
             <p>
-              This species, which could grow up to 3.4 meters (11 ft) long.
-              Small body, sleek, horizontal posture, ratite-like spine, and
-              especially the enlarged raptorial claws on the feet, which
-              suggested an active, agile predator.
+              Loài này có thể phát triển đến chiều dài 3,4 mét. Kích thước nhỏ,
+              tư thế cơ thể nằm ngang, gai sống giống đà điểu, và đặc biệt là
+              móng vuốt rất dài, làm nó trở thành một kẻ ăn thịt nhanh nhẹn,
+              hoạt bát.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-3-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-3-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-3-3" class="indicator-index"></div>
               </div>
@@ -616,7 +625,7 @@
       <!-- The Modal 4 -->
       <div id="modal_4" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -626,26 +635,25 @@
           <div class="modal-body">
             <h2>MEGALOSAURUS</h2>
             <p>
-              Megalosaurus was about 6 metres, weighing about 700 kilograms.
-              Walking on stout hindlimbs, its torso balanced by a tail. Its
-              forelimbs were short, though very robust. Megalosaurus had a
-              rather large head, long curved teeth. It was a robust and heavily
-              muscled animal.
+              Megalosaurus dài khoảng 6 mét, nặng khoảng 700 kg. Đi bằng hai
+              chân sau, thân ngang và một cái đuôi nằm ngang. Tay của nó ngắn,
+              mặc dù rất khỏe mạnh. Được trang bị những chiếc răng dài cong. Nó
+              là một con vật khỏe mạnh và có cơ bắp nặng nề.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-4-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-4-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-4-3" class="indicator-index"></div>
               </div>
@@ -657,7 +665,7 @@
       <!-- The Modal 5 -->
       <div id="modal_5" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -667,26 +675,25 @@
           <div class="modal-body">
             <h2>EORAPTOR</h2>
             <p>
-              Eoraptor had a slender body that grew to about 1 metre in length,
-              with an estimated weight of about 10 kilograms. Eoraptor is an
-              omnivore, it was a swift sprinter and, upon catching its prey, it
-              would use claws and teeth to tear the prey apart. It was one of
-              the smartest in the Triassic.
+              Eoraptor có thân hình mảnh mai dài tới 1 mét, với trọng lượng
+              khoảng 10 kg. Eoraptor là một loài động vật ăn tạp, chạy nước rút
+              nhanh và khi bắt được con mồi, nó sẽ dùng móng vuốt và răng để xé
+              thịt. Nó là một trong những loài thông minh nhất thời đó.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-5-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-5-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-5-3" class="indicator-index"></div>
               </div>
@@ -698,7 +705,7 @@
       <!-- The Modal 6 -->
       <div id="modal_6" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -708,26 +715,26 @@
           <div class="modal-body">
             <h2>TRICERATOPS</h2>
             <p>
-              Triceratops is one of the most recognizable of all dinosaurs and
-              the most well-known and also one of the largest, up to 9 meters
-              long and 12 metric tons. The functions of the frills and three
-              facial horns were used in fighting, species identification,
-              courtship and dominance display.
+              Triceratops là một trong những khủng long nổi tiếng nhất và khá
+              lớn với chiều dài lên tới 9 mét và nặng 12 tấn. Công dụng ba chiếc
+              sừng được dùng để chiến đấu, nhận dạng nhau, tán tỉnh, và thể hiện
+              sự thống trị, giống như gạc và sừng của tuần lộc, dê núi và kiến
+              vương hiện đại.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-6-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-6-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-6-3" class="indicator-index"></div>
               </div>
@@ -739,7 +746,7 @@
       <!-- The Modal 7 -->
       <div id="modal_7" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -749,26 +756,26 @@
           <div class="modal-body">
             <h2>ARGENTINOSAURUS</h2>
             <p>
-              Argentinosaurus is one of the largest known land animals of all
-              time, perhaps the largest, with length estimates ranging from 30
-              to 40 metres and weight estimates from 50 to 100 tonnes. A
-              herbivore with the long neck which can be used to reach tree
-              foliages and scnning the grounds.
+              Argentinosaurus là một trong những động vật trên cạn lớn nhất mọi
+              thời đại, có thể là lớn nhất trong số tất cả, dài khoảng 30-40 mét
+              là nặng lên đến 50-100 tấn. Là một loài động vật ăn cỏ nó có dùng
+              cái cổ dài để với cây thông hoặc tìm kiếm trên mặt đất một số loại
+              dương xỉ và cây bụi.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-7-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-7-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-7-3" class="indicator-index"></div>
               </div>
@@ -780,7 +787,7 @@
       <!-- The Modal 8 -->
       <div id="modal_8" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -790,26 +797,26 @@
           <div class="modal-body">
             <h2>THERIZINOSAURUS</h2>
             <p>
-              Therizinosaurus was a colossal that could grow up to 9–10m long
-              and weigh possibly over 3 tonnes. It is slow-moving, long-necked
-              high browser equipped with a horny beak and a wide torso. The
-              forelimbs were robust and had three fingers with long and sharp
-              claws
+              Therizinosaurus khá to lớn có thể dài tói 10 mét là nặng hơn 3
+              tấn. Nó đi khá chậm, có một cái cổ dài cùng cái mỏ nhọn và thân
+              hình rộng. Hai tay của nó rt61 khỏe và có ba ngón tay được trang
+              bị những cái móng dài và sắc. Dù vậy chúng thật ra là một loài ăn
+              cỏ.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-8-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-8-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-8-3" class="indicator-index"></div>
               </div>
@@ -821,7 +828,7 @@
       <!-- The Modal 9 -->
       <div id="modal_9" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -831,26 +838,26 @@
           <div class="modal-body">
             <h2>ANKYLOSAURUS</h2>
             <p>
-              Ankylosaurus had a robust broad body with wide, low skull, two
-              horns pointing backward from the back of the head, its armor,
-              consisting of knobs and plates of bone, or scutes, embedded in the
-              skin. A herbivore with a sturdy armor, it has difficulties in
-              finding food due to its wide body.
+              Ankylosaurus có thân hình rộng và khỏe, hộp sọ thấp, hai cái sừng
+              mọc ngược về phía sau đầu. Nó được trang bị bộ giáp được bao phủ
+              bới những lớp vảy sừng chắc chắn dính chặt vào lưng. Là một loài
+              ăn cỏ nhưng nó thường gập khó khăn trong việc tìm thức ăn do cơ
+              thể quá thấp.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-9-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-9-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-9-3" class="indicator-index"></div>
               </div>
@@ -862,7 +869,7 @@
       <!-- The Modal 10 -->
       <div id="modal_10" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -872,26 +879,25 @@
           <div class="modal-body">
             <h2>STEGOSAURUS</h2>
             <p>
-              Stegosaurus were large, heavily built, herbivorous with rounded
-              backs, long hind limbs, and tails held high in the air, upright
-              plates and tail tipped with spikes. Their spiked tails were used
-              for defense against predators, while their plates may have been
-              used for thermoregulatory.
+              Stegosaurus là loài ăn cỏ có thân hình khá to và khỏe, chân sau
+              của nó dài hơn chân trước nên cái đuôi đầy gai luôn hướng lên trời
+              để phòng thủ trước thú săn mồi, sau lưng nó là những tấm sừng có
+              công dụng điều tiết nhiệt độ cho cơ thể.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-10-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-10-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-10-3" class="indicator-index"></div>
               </div>
@@ -903,7 +909,7 @@
       <!-- The Modal 11 -->
       <div id="modal_11" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -913,25 +919,26 @@
           <div class="modal-body">
             <h2>PTERANODON</h2>
             <p>
-              Pteranodon is one of the largest pterosaur, with a horny toothless
-              skull and wide wingspan capable of flying more quickly than any
-              creature. Its diet is known to have included fish by dipping their
-              beaks into the water while in low, soaring flight.
+              Pteranodon là một trong những loài thằn lằn bay lớn nhất, với hộp
+              sọ nhọn không có răng cùng sải cánh rộng, nó có thể bay nhanh hơn
+              bất kỳ loài trên không nào khác. Thức ăn chính của nó là cá, nó
+              săn bằng cách bổ nhào gần mặt nước và gấp con mồi lên bằng cái mỏ
+              dài và nhọn.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-11-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-11-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-11-3" class="indicator-index"></div>
               </div>
@@ -943,7 +950,7 @@
       <!-- The Modal 12 -->
       <div id="modal_12" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -953,26 +960,25 @@
           <div class="modal-body">
             <h2>TROPEOGNATHUS</h2>
             <p>
-              Tropeognathus is regarded as the largest pterosaur found in the
-              Southern Hemisphere with the wingspan of 8.3-8.8 meters, 45 kg in
-              weight and 2.4 meters length. The skull bore distinctive convex
-              "keeled" crests on its snout and underside of the lower jaws,
-              well-developed, and relatively large.
+              Tropeognathus được cho là loài thằn lằn bay lớn nhất ở phía Nam
+              Bán cầu với sải cánh dài 8.3-8.8 mét, nặng khoảng 45 kg là cao 2.4
+              mét. Là loài ăn thịt nên hộp sọ của nó có các mào lồi lõm đặc biệt
+              trên mõm và cái hàm dưới phát triển tốt và tương đối lớn.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-12-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-12-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-12-3" class="indicator-index"></div>
               </div>
@@ -984,7 +990,7 @@
       <!-- The Modal 13 -->
       <div id="modal_13" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -994,26 +1000,26 @@
           <div class="modal-body">
             <h2>JEHOLOPTERUS</h2>
             <p>
-              With its broad, short wings, Jeholopterus ningchengensis could bob
-              and weave through branches and reeds to chase down insects. Once
-              this agile hunter got close enough to its prey, it could snatch an
-              insect right out of the air with its small jaws and tiny, sharp
-              teeth.
+              Với đôi cánh ngắn và rộng nó có thể nhấp nhô và len lỏi qua các
+              cành cây và lau sậy để đuổi côn trùng. Một khi người thợ săn nhanh
+              nhẹn này đến đủ gần con mồi, nó có thể tóm gọn một con côn trùng
+              ngay từ trong không khí bằng bộ hàm nhỏ và những chiếc răng nhỏ,
+              sắc nhọn.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-13-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-13-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-13-3" class="indicator-index"></div>
               </div>
@@ -1025,7 +1031,7 @@
       <!-- The Modal 14 -->
       <div id="modal_14" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -1035,25 +1041,25 @@
           <div class="modal-body">
             <h2>Quetzalcoatlus</h2>
             <p>
-              Quetzalcoatlus is an azhdarchid pterosaur known from the Late
-              Cretaceous of North America (Maastrichtian stage). It is a member
-              of the family Azhdarchidae, a family of advanced toothless
-              pterosaurs with unusually long, stiffened necks.
+              Quetzalcoatlus là một loài khủng long azhdarchid được biết đến từ
+              kỷ Phấn trắng muộn của Bắc Mỹ. Có một chiếc mỏ rất sắc và nhọn. Nó
+              là một thành viên của họ Azhdarchidae, một họ động vật ăn thịt
+              không răng cao cấp với chiếc cổ dài và cứng bất thường.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-14-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-14-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-14-3" class="indicator-index"></div>
               </div>
@@ -1065,7 +1071,7 @@
       <!-- The Modal 15 -->
       <div id="modal_15" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -1075,26 +1081,26 @@
           <div class="modal-body">
             <h2>Pliosaurus</h2>
             <p>
-              Pliosaurus lived during the Late Jurassic Period and lived off of
-              a diet of fish, squids and other marine reptiles. This beast was
-              probably at the top of the food chain wherever it went due to its
-              huge size of 10 to 13 metres and huge, powerful jaws with its
-              rosette of large teeth at the tip of its snout.
+              Pliosaurus sống trong kỷ Jura muộn và ăn cá, mực và các loài bò
+              sát biển khác. Con quái vật này có lẽ đứng đầu chuỗi thức ăn ở bất
+              cứ nơi nào nó đi qua do kích thước khổng lồ từ 10 đến 13 mét và bộ
+              hàm khổng lồ, mạnh mẽ với những chiếc răng lớn hình hoa thị ở đầu
+              mõm.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-15-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-15-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-15-3" class="indicator-index"></div>
               </div>
@@ -1106,7 +1112,7 @@
       <!-- The Modal 16 -->
       <div id="modal_16" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -1116,25 +1122,26 @@
           <div class="modal-body">
             <h2>Elasmosaurus</h2>
             <p>
-              Elasmosaurus thrived during the Cretaceous Period, and lived on a
-              diet of fish and other small sea creatures of that time. They
-              typically reached around 10–14 meters in total body length, with a
-              neck that counted for over half of its body length.
+              Nó thuộc về gia đình bao gồm các loài khủng long cổ dài nhất.
+              Elasmosaurus phát triển mạnh trong Kỷ Phấn trắng , và ăn cá và các
+              sinh vật biển nhỏ khác vào thời đó. Chúng thường đạt tổng chiều
+              dài cơ thể khoảng 10–14 mét, với chiếc cổ dài hơn một nửa chiều
+              dài cơ thể.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-16-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-16-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-16-3" class="indicator-index"></div>
               </div>
@@ -1146,7 +1153,7 @@
       <!-- The Modal 17 -->
       <div id="modal_17" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -1156,26 +1163,25 @@
           <div class="modal-body">
             <h2>Mosasaurus</h2>
             <p>
-              Mosasaurus was a genus of mosasaur, giant carnivorous, aquatic
-              lizards, somewhat resembling flippered crocodiles, with big
-              elongated jaws. Mosasaurus who was a generalist predator so it
-              would take anything that fit into its mouth, not unlike tiger
-              sharks today.
+              Mosasaurus là một chi của mosasaur, loài thằn lằn thủy sinh, ăn
+              thịt khổng lồ, hơi giống cá sấu chân chèo, với bộ hàm to dài. Vốn
+              là một kẻ săn mồi nói chung nên nó sẽ lấy bất cứ thứ gì vừa miệng
+              của nó, không khác gì cá mập hổ ngày nay.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-17-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-17-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-17-3" class="indicator-index"></div>
               </div>
@@ -1187,7 +1193,7 @@
       <!-- The Modal 18 -->
       <div id="modal_18" class="modal">
         <img
-          src="assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
+          src="../assets/BOOKS/BOOK_INFO/NÚT TẮT INFO.png"
           class="close"
           onclick="closeModal()"
         />
@@ -1197,26 +1203,25 @@
           <div class="modal-body">
             <h2>Spinosaurus</h2>
             <p>
-              Spinosaurus were among the largest known of all carnivorous
-              dinosaurs. The elongated neural spines, run to the end of the tail
-              on both dorsal and ventral sides, could be a generalist predator
-              that hunted variety of prey item, like aquatic animals such as
-              massive, multi-ton fish species.
+              Spinosaurus là một trong những loài khủng long ăn thịt lớn nhất
+              từng được biết đến. Các gai thần kinh kéo dài, chạy đến cuối đuôi
+              ở cả mặt lưng và mặt bụng. Là một loài động vật ăn thịt nói chung
+              săn nhiều loại con mồi, như các loài cá nặng, nặng nhiều tấn.
             </p>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KIẾM.png" />
               <div class="indicator">
                 <div id="indicator-18-1" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/KHIÊN.png" />
               <div class="indicator">
                 <div id="indicator-18-2" class="indicator-index"></div>
               </div>
             </div>
             <div class="indicator-bar">
-              <img src="assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
+              <img src="../assets/CATALOGUE/BIỂU TƯỢNG/BÓNG ĐÈN.png" />
               <div class="indicator">
                 <div id="indicator-18-3" class="indicator-index"></div>
               </div>
@@ -1243,12 +1248,10 @@
     <!---------------x------------------ Footer -----------------x---------------->
 
     <!-- Jquery Library file -->
-    <script src="./js/Jquery3.6.0.min.js"></script>
-
-    <!-- Owl-Carousel js -->
-    <script src="./js/owl.carousel.min.js"></script>
+    <script src="../js/Jquery3.6.0.min.js"></script>
 
     <!-- Custome Javascript file -->
-    <script src="./js/catalogue.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/catalogue.js"></script>
   </body>
 </html>

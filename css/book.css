@@ -2,10 +2,6 @@
 
 html,
 body {
-  margin: 0%;
-  box-sizing: border-box;
-  overflow-x: hidden;
-
   background: url("../assets/BOOKS/MAIN_SITE/BACKGROUND\ FILL\ GIỮ\ CỐ\ ĐỊNH.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,111 +9,29 @@ body {
   background-position: center;
 }
 
-:root {
-  /*      theme font-family   */
-  --Bungee: "Bungee", cursive;
-  --Kavoon: "Kavoon", cursive;
-  --Roboto_Slab: "Roboto_Slab", cursive;
-
-  /*      theme font-color  */
-  --text: #fffadc;
-}
-
-.nav {
-  background-size: cover;
-  background: url("../assets/TOP\ BAR.png");
-  height: 11.5vh;
-}
-
-.top-bar-left {
-  width: 100%;
-  justify-content: space-between;
-}
-
-.top-bar-left .logo {
-  width: 30%;
-  margin: 1.35rem -0.7rem;
-}
-
-.top-bar-left .top-menu {
-  float: right;
-  margin: 1rem 2.5rem;
-  display: block;
-  width: 60%;
-}
-
-.top-bar-left .top-menu .language {
-  float: right;
-  width: 6%;
-}
-
-.top-bar-left .top-menu .menu {
-  position: relative;
-  width: 100%;
-  display: flex;
-  /* margin: 2rem 5rem 0 0; */
-  justify-content: space-between;
-}
-
-.top-bar-left .top-menu .menu .menu-item {
-  /* margin: 0.5rem 2rem 0 0rem; */
-  margin-right: 3rem;
-  color: var(--text);
-  width: 100%;
-  position: relative;
-}
-
-.top-bar-left .top-menu .menu .menu-item > img {
-  position: absolute;
-  width: 120%;
-  z-index: 1;
-  min-width: 10rem;
-}
-
-.top-bar-left .top-menu .menu .menu-item > p {
-  width: 120%;
-  position: relative;
-  z-index: 100;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 24px;
-  text-transform: uppercase;
-  font-family: var(--Kavoon);
-  margin: 1rem 0 0 0;
-}
-
-/******** Main ********/
-main {
-  /* width: 100%; */
-  height: 400vh;
-  justify-content: center;
-  /* overflow: hidden; */
-}
-
 /******** Banner ********/
 
 main .banner {
-  width: 100%;
-  height: 15%;
+  border: orange 0.2rem solid;
   background: url("../assets/BOOKS/MAIN_SITE/BANNER.png");
   background-size: cover;
-  border: orange 0.2rem solid;
 }
 
 main .banner > p {
-  font-size: 9rem;
+  font-size: 10vw;
   font-family: var(--Bungee);
   text-transform: uppercase;
   text-align: center;
   color: var(--text);
   text-shadow: 0.5rem 0.5rem 0.75rem #2c2b2b;
+  line-height: 15vw;
 }
 
 /******** Book list ********/
 
 main .book-list {
-  width: 90%;
-  height: 85%;
+  max-width: 90%;
+  height: auto;
   margin: 0 4.5%;
   background-size: cover;
   border: orange 0.2rem solid;
@@ -127,27 +41,27 @@ main .book-list {
 main .book-list .list-item {
   margin: 4rem 4rem;
   width: 100%;
-  height: 22%;
+  height: auto;
 }
 
 main .book-list .list-item .slidebar {
-  width: 90%;
-  height: 80%;
+  max-width: 90%;
+  height: auto;
 }
 
 main .book-list .list-item .title-list {
   background: url("../assets/NÚT.png");
   background-size: cover;
-  width: 20%;
+  max-width: 20%;
+  display: flex;
+  justify-content: center;
 }
 
 main .book-list .list-item .title-list > p {
-  text-align: center;
-  font-size: 2.2rem;
+  font-size: 1.5vw;
   text-transform: uppercase;
   font-family: var(--Kavoon);
   color: var(--text);
-  padding: 1rem 0;
 }
 
 main .book-list .list-item .slidebar .item {
@@ -170,12 +84,12 @@ main .book-list .list-item .slidebar .item > img {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 102; /* Sit on top */
-  padding-top: 4%; /* Location of the box */
+  padding-top: 2%; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
@@ -184,12 +98,12 @@ main .book-list .list-item .slidebar .item > img {
 
 .modal-content {
   position: relative;
-  background: url("../assets/BOOKS/BOOK_INFO/BACKGROUND\ INFO\ SÁCH.png")
-    no-repeat;
+  background: url("../assets/BOOKS/BOOK_INFO/BACKGROUND\ INFO\ SÁCH.png");
+  background-size: cover;
   margin: auto;
   padding: 0;
-  width: 42%;
-  height: 87%;
+  max-width: 42%;
+  height: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 1rem;
   overflow: hidden;
@@ -218,6 +132,7 @@ main .book-list .list-item .slidebar .item > img {
 .close {
   position: absolute;
   padding: 1% 70%;
+  width: 5vw;
 }
 
 .close:hover,
@@ -230,52 +145,56 @@ main .book-list .list-item .slidebar .item > img {
 .modal-header {
   background: url("../assets/BOOKS/BOOK_INFO/NỀN\ SAU\ SÁCH.png");
   background-size: cover;
-  width: 100%;
-  height: 50%;
+  max-width: 100%;
+  height: auto;
   border-radius: 1rem;
+  display: flex;
 }
 
 .modal-header > img {
-  position: absolute;
+  position: relative;
   margin: auto;
-  top: 3%;
-  left: 0;
-  right: 0;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 .modal-body {
   width: 100%;
-  height: 100%;
+  height: auto;
   color: var(--text);
 }
 
 .modal-body > h2 {
-  font-size: 2.2rem;
+  font-size: 2vw;
   text-transform: uppercase;
   font-family: var(--Bungee);
   text-shadow: 2px 2px 4px #2c2b2b;
   text-align: center;
+  margin: 0;
+  line-height: 8vw;
 }
 
 .modal-body > p {
-  padding: 0 10%;
+  padding: 0 1%;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1vw;
+  margin: 0;
+  font-family: "Roboto_Slab";
 }
 
 .modal-body .bottom-btn {
-  background: url("../assets/NÚT.png") no-repeat;
+  background: url("../assets/NÚT.png");
   background-size: cover;
-  width: 40%;
-  height: 9%;
+  max-width: 40%;
+  height: auto;
   margin: auto;
+  cursor: pointer;
 }
 
 .modal-body .bottom-btn > p {
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   text-transform: uppercase;
   font-family: var(--Bungee);
-  /* margin: auto; */
   text-align: center;
 }
 
@@ -291,28 +210,102 @@ footer.footer {
   height: 6.6vh;
 }
 
-/*              Viewport less then or equal to 1130px            */
+/*              Viewport less then or equal to 1024px            */
 
-@media only screen and (max-width: 1130px) {
-  .nav .top-bar-left .top-menu .menu .menu-item > p {
-    font-size: 12px;
+@media only screen and (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+
+  .modal-content,
+  .close {
+    top: 20%;
+  }
+
+  .close {
+    padding: 5% 70%;
+  }
+
+  .indicator-index {
+    height: 1.5rem !important;
+  }
+
+  .modal-content {
+    max-width: 90%;
+  }
+
+  .modal-header {
+    height: 25vh;
+  }
+
+  .modal-body > h2 {
+    font-size: 6vw;
+  }
+
+  .modal-body > p {
+    font-size: 3vw;
+  }
+
+  main .banner > p {
+    font-size: 15vw;
+    line-height: 20vw;
+  }
+
+  .nav .top-menu {
+    display: none;
+  }
+
+  #overlay-button span {
+    display: block;
+  }
+
+  main .book-list .list-item .title-list {
+    max-width: 40%;
+  }
+
+  main .book-list .list-item .title-list > p {
+    font-size: 3vw;
   }
 }
 
-/*              Viewport less then or equal to 750px            */
+/*              Viewport less then or equal to 768px            */
 
-@media only screen and (max-width: 750px) {
-  .nav .top-bar-left,
-  .nav .top-menu,
-  .nav .menu {
-    flex-direction: column;
+@media only screen and (max-width: 768px) {
+  .thumbnail img {
+    width: 60%;
   }
 
-  .nav .top-bar-left .top-menu .language {
-    /* display: none; */
+  .indicator-index {
+    height: 1rem !important;
   }
 
-  .nav .toggle-collapse {
-    display: initial;
+  .card {
+    right: 18%;
+    /* left: 14%; */
+  }
+
+  main .book-list .list-item {
+    margin: 4rem 2.5rem;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*              Viewport less then or equal to 500px            */
+
+@media only screen and (max-width: 500px) {
+  .nav .logo > img {
+    width: 80%;
+  }
+
+  main .book-list .list-item {
+    margin: 1rem 1.2rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .modal-body .bottom-btn > p {
+    font-size: 3.2vw;
+    line-height: 2.2rem;
   }
 }

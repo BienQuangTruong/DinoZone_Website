@@ -21,8 +21,10 @@ function closeModal() {
 }
 
 window.onclick = function (event) {
-  if (event.target == modal || event.target == modal_watch) {
+  if (event.target == modal_watch) {
     modal_watch.style.display = "none";
+  }
+  if (event.target == modal) {
     modal.style.display = "none";
   }
 };
