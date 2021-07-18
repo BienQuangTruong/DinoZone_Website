@@ -39,9 +39,10 @@ main .book-list {
 }
 
 main .book-list .list-item {
-  width: 90%;
+  max-width: 89%;
   margin: auto;
   margin-top: 1vw;
+  margin-bottom: 2vw;
   height: auto;
 }
 
@@ -211,10 +212,6 @@ footer.footer {
 /*              Viewport less then or equal to 1024px            */
 
 @media only screen and (max-width: 1024px) {
-  .cards {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  }
-
   .modal-content,
   .close {
     top: 20%;
@@ -275,11 +272,6 @@ footer.footer {
 
   .indicator-index {
     height: 1rem !important;
-  }
-
-  .card {
-    right: 18%;
-    /* left: 14%; */
   }
 
   main .book-list .list-item {

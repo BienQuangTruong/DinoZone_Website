@@ -39,7 +39,7 @@ main .movie-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
   grid-auto-rows: minmax(200px, auto);
-  grid-gap: 5em 0;
+  grid-gap: 4em 0;
 }
 
 main .movie-list .movie-item {
