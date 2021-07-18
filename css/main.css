@@ -235,11 +235,11 @@ footer.footer {
   text-align: center;
   color: var(--text);
   font-family: var(--Roboto_Slab);
-  font-size: 1.2vh;
+  font-size: 2vh;
 }
 
 .copyright a {
-  font-size: 1.5vh;
+  font-size: 2.5vh;
   font-weight: bold;
   color: #ae1e19;
   text-decoration: none;
@@ -250,5 +250,17 @@ footer.footer {
 @media only screen and (max-width: 1024px) {
   .nav .logo {
     max-width: 40vw;
+  }
+}
+
+/*              Viewport less then or equal to 768px            */
+
+@media only screen and (max-width: 768px) {
+  .copyright p {
+    font-size: 1vh;
+  }
+
+  .copyright a {
+    font-size: 1.5vh;
   }
 }
