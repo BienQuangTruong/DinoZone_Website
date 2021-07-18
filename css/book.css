@@ -39,13 +39,14 @@ main .book-list {
 }
 
 main .book-list .list-item {
-  margin: 4rem 4rem;
-  width: 100%;
+  width: 90%;
+  margin: auto;
+  margin-top: 1vw;
   height: auto;
 }
 
 main .book-list .list-item .slidebar {
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -152,6 +153,7 @@ main .book-list .list-item .slidebar .item > img {
 }
 
 .modal-header > img {
+  max-width: 28%;
   position: relative;
   margin: auto;
   margin-top: 2vh;
@@ -171,7 +173,7 @@ main .book-list .list-item .slidebar .item > img {
   text-shadow: 2px 2px 4px #2c2b2b;
   text-align: center;
   margin: 0;
-  line-height: 8vw;
+  line-height: 4vw;
 }
 
 .modal-body > p {
@@ -189,6 +191,7 @@ main .book-list .list-item .slidebar .item > img {
   height: auto;
   margin: auto;
   cursor: pointer;
+  margin-top: 0;
 }
 
 .modal-body .bottom-btn > p {
@@ -196,11 +199,6 @@ main .book-list .list-item .slidebar .item > img {
   text-transform: uppercase;
   font-family: var(--Bungee);
   text-align: center;
-}
-
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #5cb85c;
 }
 
 /******** Footer ********/

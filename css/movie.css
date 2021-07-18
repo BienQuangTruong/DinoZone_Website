@@ -37,7 +37,7 @@ main .movie-list {
   border: orange 0.2rem solid;
   background: rgba(255, 255, 255, 0.5);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
   grid-auto-rows: minmax(200px, auto);
   grid-gap: 5em 0;
 }
@@ -210,7 +210,6 @@ main .movie-list .movie-item .movie-control .info-btn > p {
   font-size: 1.5rem;
   text-transform: uppercase;
   font-family: var(--Bungee);
-  /* margin: auto; */
   text-align: center;
 }
 
@@ -275,10 +274,6 @@ footer.footer {
 /*              Viewport less then or equal to 1024px            */
 
 @media only screen and (max-width: 1024px) {
-  .cards {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  }
-
   .modal-content,
   .close {
     top: 20%;
@@ -319,10 +314,6 @@ footer.footer {
 
   main .movie-list .movie-item .movie-control .info-btn {
     width: 100%;
-  }
-
-  main .movie-list .movie-item .movie-control .info-btn > p {
-    font-size: 2.5vw;
   }
 
   .modal-watch {

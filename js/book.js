@@ -26,7 +26,7 @@ function show(clicked_id) {
   modal = document.getElementById(clicked_id);
   btn = document.getElementById(clicked_id);
   span = document.getElementById(clicked_id);
-  modal.style.display = "block";
+  modal.style.display = "flex";
 }
 
 function closeModal() {
