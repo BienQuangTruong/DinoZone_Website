@@ -22,14 +22,14 @@
         <div id="overlay">
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="./en/catalogue.html">catalogue</a></li>
-            <li><a href="./en/games.html">games</a></li>
-            <li><a href="./en/books.html">books</a></li>
-            <li><a href="./en/movies.html">movies</a></li>
+            <li><a href="en/catalogue.html">catalogue</a></li>
+            <li><a href="en/games.html">games</a></li>
+            <li><a href="en/books.html">books</a></li>
+            <li><a href="en/movies.html">movies</a></li>
             <li>
               <img
                 class="language"
-                onclick="changeLanguage('vn')"
+                onclick="changeLanguage('vn-home')"
                 src="assets/CỜ ANH MINI.png"
               />
             </li>
@@ -39,20 +39,20 @@
         <div class="top-menu">
           <img
             class="language"
-            onclick="changeLanguage('vn')"
+            onclick="changeLanguage('vn-home')"
             src="assets/CỜ ANH MINI.png"
           />
           <div class="menu">
-            <div class="menu-item" onclick="redirect('catalog')">
+            <div class="menu-item" onclick="redirect('catalog-home')">
               <p>catalogue</p>
             </div>
-            <div class="menu-item" onclick="redirect('game')">
+            <div class="menu-item" onclick="redirect('game-home')">
               <p>games</p>
             </div>
-            <div class="menu-item" onclick="redirect('book')">
+            <div class="menu-item" onclick="redirect('book-home')">
               <p>books</p>
             </div>
-            <div class="menu-item" onclick="redirect('movie')">
+            <div class="menu-item" onclick="redirect('movie-home')">
               <p>movies</p>
             </div>
           </div>
@@ -125,17 +125,26 @@
         </div>
       </div>
       <div class="catalog-container">
-        <div class="catalog-top" onclick="redirect('catalog')">
+        <div class="catalog-top" onclick="redirect('catalog-home')">
           <p>dino catalogue</p>
         </div>
         <div class="catalog-bottom">
-          <div class="catalog-item catalog-game" onclick="redirect('game')">
+          <div
+            class="catalog-item catalog-game"
+            onclick="redirect('game-home')"
+          >
             <p>games</p>
           </div>
-          <div class="catalog-item catalog-book" onclick="redirect('book')">
+          <div
+            class="catalog-item catalog-book"
+            onclick="redirect('book-home')"
+          >
             <p>books</p>
           </div>
-          <div class="catalog-item catalog-movie" onclick="redirect('movie')">
+          <div
+            class="catalog-item catalog-movie"
+            onclick="redirect('movie-home')"
+          >
             <p>movies</p>
           </div>
         </div>

@@ -24,6 +24,18 @@ function redirect(site) {
     case "vn-movie":
       window.location.href = "../vn/movies.html";
       break;
+    case "catalog-home":
+      window.location.href = "en/catalogue.html";
+      break;
+    case "game-home":
+      window.location.href = "en/games.html";
+      break;
+    case "book-home":
+      window.location.href = "en/books.html";
+      break;
+    case "movie-home":
+      window.location.href = "en/movies.html";
+      break;
     default:
       window.location.href = "../index.html";
       break;
@@ -44,6 +56,9 @@ function changeLanguage(n) {
   switch (n) {
     case "vn":
       window.location.href = "../vn/index.html";
+      break;
+    case "vn-home":
+      window.location.href = "vn/index.html";
       break;
     case "en":
       window.location.href = "../index.html";
